@@ -1,2 +1,4 @@
-# til
-Today I Learned
+# Today I Learned
+
+- JavaScript
+- Vue.js
