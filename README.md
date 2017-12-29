@@ -2,3 +2,5 @@
 
 - JavaScript
 - Vue.js
+- Tmux
+- Node.js
