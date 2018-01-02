@@ -2,9 +2,9 @@
 
 ## Categories
 
-* [Node.js](#node.js)
+* [Node.js](#nodejs)
 * [JavaScript](#javascript)
-* [Vue.js](#vue.js)
+* [Vue.js](#vuejs)
 * [CSS](#css)
 * [Git](#git)
 * [Vim](#vim)
@@ -14,7 +14,7 @@
 
 ## Node.js
 
-- [https-all-the-thing](nodejs/12-28-2017-https-all-the-things.md)
+- [HTTPS all the things](nodejs/12-28-2017-https-all-the-things.md)
 
 ## JavaScript
 
