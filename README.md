@@ -37,6 +37,8 @@
 
 ## Vim
 
+- [Split navgations](vim/01-04-2018/split-navigations-in-vim.md)
+
 ## Tmux
 
 - [Kill all Tmux session](tmux/12-26-2017-kill-all-tmux-sessions.md)
