@@ -37,7 +37,7 @@
 
 ## Vim
 
-- [Split navgations](vim/01-04-2018/split-navigations-in-vim.md)
+- [Split navgations](vim/01-04-2018-split-navigations-in-vim.md)
 
 ## Tmux
 
