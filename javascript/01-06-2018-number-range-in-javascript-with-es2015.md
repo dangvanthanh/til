@@ -7,6 +7,6 @@
 Array.from({ length: 6 }).map((_, i) => i)
 // [0, 1, 2, 3, 4, 5]
 
-Array(6).fill().mapp((_, i) => i)
+Array(6).fill().map((_, i) => i)
 // [0, 1, 2, 3, 4, 5]
 ```
