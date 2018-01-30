@@ -9,7 +9,6 @@
 * [Git](#git)
 * [Vim](#vim)
 * [Tmux](#tmux)
-
 ---
 
 ## Node.js
@@ -39,6 +38,7 @@
 ## Vim
 
 - [Split navgations](vim/01-04-2018-split-navigations-in-vim.md)
+- [Find and replace string](vim/01-30-2018-find-and-replace-strings-in-vim.md)
 
 ## Tmux
 
