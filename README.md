@@ -39,6 +39,7 @@
 
 - [Split navgations](vim/01-04-2018-split-navigations-in-vim.md)
 - [Find and replace string](vim/01-30-2018-find-and-replace-strings-in-vim.md)
+- [Neovim](vim/02-08-2018-neovim.md)
 
 ## Tmux
 
