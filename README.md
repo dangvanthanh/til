@@ -21,6 +21,7 @@
 - [Max and min from array](javascript/13-12-2017-max-and-min-from-array.md)
 - [ES6 object destructuring](javascript/19-12-2017-es6-object-destructuring.md)
 - [Create list number range with ES2015](javascript/01-06-2018-number-range-in-javascript-with-es2015.md)
+- [ES6 features](javascript/03-08-2018-es6-features.md)
 
 ## Vue.js
 
