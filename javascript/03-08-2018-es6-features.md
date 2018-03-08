@@ -74,6 +74,18 @@ class Vehicle {
 
 ### Object-literal Improvements
 
+```javascript
+function getLaptop (make, model, year) {
+  return {
+    make,
+    model,
+    year
+  }
+}
+
+getLaptop('Apple', 'Macbook', '2014') // { make: 'Apple', model: 'Macbook', year: '2014' }
+```
+
 ### Template String Literals
 
 ```javascript
