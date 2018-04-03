@@ -10,8 +10,6 @@
 * [Vim](#vim)
 * [Tmux](#tmux)
 
----
-
 ## Node.js
 
 * [HTTPS all the things](nodejs/12-28-2017-https-all-the-things.md)
