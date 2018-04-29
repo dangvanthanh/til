@@ -22,6 +22,7 @@
 * [Create list number range with ES2015](javascript/01-06-2018-number-range-in-javascript-with-es2015.md)
 * [ES6 features](javascript/03-08-2018-es6-features.md)
 * [ES 2016, 2017 and 2018](javascript/08-04-2018-ecmascript-2016-2017-and-2018.md)
+* [Sleep with Promise](JavaScript/29-04-2018-sleep-with-promise.md)
 
 ## Vue.js
 
