@@ -18,15 +18,15 @@ const Throttle = (fn, delay) => {
     }
 
     if (!timerId) {
-      execute()  
+      execute()
     }
 
     if (timerId) {
-      clearTimeout(timerId)  
+      clearTimeout(timerId)
     }
 
     if (elapssedTime > delay) {
-      export()  
+      export()
     } else {
       timerId = setTimeout(execute, delay)
     }
@@ -38,16 +38,16 @@ const Throttle = (fn, delay) => {
 
 ```javascript
 const Debounce = (fn, interval) => {
-  let timerId
+  let timerId;
 
   return () => {
-    clearTimeout(timerId)
-    const context = this
-    const args = arguments
+    clearTimeout(timerId);
+    const context = this;
+    const args = arguments;
 
     timerId = setTimeout(() => {
-      fn.apply(context, args)  
-    }, interval)
-  }
-}
+      fn.apply(context, args);
+    }, interval);
+  };
+};
 ```

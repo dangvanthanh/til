@@ -1,12 +1,12 @@
 # Escape HTML
 
 ```javascript
-function escapeHtml (target) {
+function escapeHtml(target) {
   if (typeof target !== 'string') {
-    return target  
+    return target;
   }
 
-  return target.replace(/[&'`"<>]/g, (match) => {
+  return target.replace(/[&'`"<>]/g, match => {
     return {
       '&': '&amp;',
       "'": '&#x27;',
@@ -14,7 +14,7 @@ function escapeHtml (target) {
       '"': '&quot;',
       '<': '&lt;',
       '>': '&gt;'
-    }[match]
-  })
+    }[match];
+  });
 }
 ```

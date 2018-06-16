@@ -1,0 +1,37 @@
+{
+  "name": "til",
+  "version": "0.0.1",
+  "description": "Today I Learned",
+  "main": "index.js",
+  "dependencies": {
+    "husky": "^0.14.3",
+    "prettier": "^1.13.5",
+    "pretty-quick": "^1.6.0",
+    "vuepress": "^0.10.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "precommit": "pretty-quick --staged",
+    "dev": "vuepress dev docs",
+    "release": "vuepress build docs && surge docs/.vuepress/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangvanthanh/til.git"
+  },
+  "keywords": [
+    "nodejs",
+    "javascript",
+    "vue",
+    "css",
+    "git",
+    "vim",
+    "tmux"
+  ],
+  "author": "Dang Van Thanh <chieuhue@gmail.com> (dangthanh.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dangvanthanh/til/issues"
+  },
+  "homepage": "https://github.com/dangvanthanh/til#readme"
+}

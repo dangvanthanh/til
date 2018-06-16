@@ -6,32 +6,32 @@
 // Modal
 const Modal = {
   template: '#modal',
-  data () {
+  data() {
     return {
-      isShowing: false  
-    }
+      isShowing: false
+    };
   },
   methods: {
-    toggle () {
-      this.isShowing = !this.isShowing  
+    toggle() {
+      this.isShowing = !this.isShowing;
     }
   }
-}
+};
 
 // Tooltip
 const Tooltip = {
   template: '#tooltip',
-  data () {
+  data() {
     return {
       isShowing: false
-    }
+    };
   },
   methods: {
-    toggle () {
-      this.isShowing = !this.isShowing  
+    toggle() {
+      this.isShowing = !this.isShowing;
     }
   }
-}
+};
 ```
 
 ## Using mixins

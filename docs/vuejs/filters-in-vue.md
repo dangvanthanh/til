@@ -4,18 +4,18 @@
 
 ```javascript
 // Global
-Vue.filter('filterName', function (value) {
-  return  
-})
+Vue.filter('filterName', function(value) {
+  return;
+});
 
 // Locally
 new Vue({
   filters: {
-    filterName (value) {
-      return  
-    }  
+    filterName(value) {
+      return;
+    }
   }
-})
+});
 ```
 
 ## HTML

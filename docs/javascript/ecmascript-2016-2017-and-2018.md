@@ -41,7 +41,7 @@ Math.pow(7, 2); // 49
 `Object.values()` returns all the values of the Objects
 
 ```javascript
-const motobikes = {suzuki: 1, bwm: 2, kawasaki: 3};
+const motobikes = { suzuki: 1, bwm: 2, kawasaki: 3 };
 
 // Use Object.keys()
 const vals = Object.keys(motobikes).map(key => motobikes[key]);
@@ -57,7 +57,7 @@ console.log(vals); // [1, 2, 3]
 `Object.entries()` return both keys and values in the Array
 
 ```javascript
-const bicyles = {giant: 2017, java: 2018, colnago: 2019};
+const bicyles = { giant: 2017, java: 2018, colnago: 2019 };
 
 // Print key and value using Object.keys()
 Object.keys(bicyles).forEach(key => {
@@ -102,7 +102,7 @@ That allow prepending either an emptry string or some other string to the end of
 const cars = {
   BWM: '10',
   Tesla: '5',
-  Lamborghini: '0',
+  Lamborghini: '0'
 };
 
 Object.entries(car).map(([name, count]) => {

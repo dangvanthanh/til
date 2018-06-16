@@ -41,8 +41,8 @@ export default {
   components: {
     BaseButton,
     BaseIcon,
-    BaseInput,
-  },
+    BaseInput
+  }
 };
 ```
 
@@ -57,8 +57,8 @@ export default new Vuex.Store({
   modules: {
     auth,
     posts,
-    comments,
-  },
+    comments
+  }
 });
 ```
 
@@ -100,7 +100,7 @@ export default {
     return {
       loading: false,
       error: null,
-      post: null,
+      post: null
     };
   },
   created() {
@@ -109,8 +109,8 @@ export default {
   methods: {
     getPost(postId) {
       // Todo
-    },
-  },
+    }
+  }
 };
 ```
 
@@ -140,10 +140,10 @@ export default {
         ...this.$listeners,
         input: event => {
           this.$emit('input', event.target.value);
-        },
+        }
       };
-    },
-  },
+    }
+  }
 };
 </script>
 
