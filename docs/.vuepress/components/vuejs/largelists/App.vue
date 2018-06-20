@@ -33,6 +33,7 @@ let list = Array(rowCount)
   });
 
 export default {
+  name: 'vuejs-largelists-App',
   data() {
     return {
       list: list

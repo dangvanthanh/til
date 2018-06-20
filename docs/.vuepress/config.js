@@ -7,6 +7,7 @@ module.exports = {
       { text: 'JavaScript', link: '/javascript/' },
       { text: 'Vue.js', link: '/vuejs/' },
       { text: 'CSS', link: '/css/' },
+      { text: 'Canvas', link: '/canvas/' },
       { text: 'Git', link: '/git/' },
       { text: 'Vim', link: '/vim/' },
       { text: 'Tmux', link: '/tmux/' }
