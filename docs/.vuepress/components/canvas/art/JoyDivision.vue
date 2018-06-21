@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { randHsl } from './Utils';
+
 export default {
   name: 'canvas-art-JoyDivision',
   mounted() {
@@ -12,9 +14,6 @@ export default {
     let size = window.innerWidth / 2;
     let step = 10;
     let lines = [];
-
-    context.fillStyle = '#f9f9f9';
-    context.lineWidth = 2;
 
     canvas.width = size;
     canvas.height = size;
@@ -43,15 +42,17 @@ export default {
         // context.lineTo(line[j].x, line[j].y);
         let xc = (line[j].x + line[j + 1].x) / 2;
         let yc = (line[j].y + line[j + 1].y) / 2;
-        // context.quadraticCurveTo(line[j].x, line[j].y, xc, yc);
-        context.quadraticCurveTo(
-          line[j].x,
-          line[j].y,
-          line[j + 1].x,
-          line[j + 1].y
-        );
+        context.quadraticCurveTo(line[j].x, line[j].y, xc, yc);
+        // context.quadraticCurveTo(
+        //   line[j].x,
+        //   line[j].y,
+        //   line[j + 1].x,
+        //   line[j + 1].y
+        // );
       }
 
+      context.fillStyle = randHsl();
+      context.lineWidth = 2;
       context.fill();
       context.stroke();
     }

@@ -3,6 +3,8 @@
 </template>
 
 <script>
+import { randHsl } from './Utils';
+
 export default {
   name: 'canvas-art-CubicDisarray',
   mounted() {
@@ -21,6 +23,8 @@ export default {
     function draw(width, height) {
       context.beginPath();
       context.rect(-width / 2, -height / 2, width, height);
+      context.fillStyle = randHsl();
+      context.fill();
       context.stroke();
     }
 
@@ -38,7 +42,7 @@ export default {
           (j / size) * plusOrMinus * Math.random() * randomDisplacement;
 
         context.save();
-        //context.translate(i, j);
+        // context.translate(i, j);
         context.translate(i + translateAmt, j);
         context.rotate(rotateAmt);
         draw(squareSize, squareSize);
