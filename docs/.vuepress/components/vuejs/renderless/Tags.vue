@@ -53,8 +53,8 @@ export default {
   line-height: 1;
   align-items: center;
   font-size: 0.875rem;
-  background-color: #bcdefa;
-  color: #1c3d5a;
+  background-color: #1c3d5a;
+  color: #fff;
   border-radius: 0.25rem;
   user-select: none;
   padding: 0.25rem;
