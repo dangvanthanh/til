@@ -9,3 +9,4 @@
 - [Sleep with Promise](/javascript/sleep-with-promise.html)
 - [Throttlet and Debounce](/javascript/throttle-and-debounce.html)
 - [Escape HTML](/javascript/escape-html.html)
+- [15 HTML Element Methods](/javascript/15-html-element-methods.html)
