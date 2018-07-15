@@ -1,5 +1,6 @@
 module.exports = {
   title: 'Today I Learned',
+  description: 'Today I Learned Everything So Slow',
   themeConfig: {
     repo: 'dangvanthanh/til',
     nav: [
