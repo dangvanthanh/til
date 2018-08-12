@@ -1,6 +1,15 @@
 module.exports = {
   title: 'Today I Learned',
   description: 'Today I Learned Everything So Slow',
+  head: [
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: '//cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css'
+      }
+    ]
+  ],
   themeConfig: {
     repo: 'dangvanthanh/til',
     nav: [

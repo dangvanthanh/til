@@ -1,3 +1,6 @@
-# Node.js
-
-- [HTTPS all the things](/nodejs/https-all-the-things.html)
+<Snippets>
+  <Snippet
+    href="/nodejs/https-all-the-things.html"
+    code=""
+    title="HTTPS all the things"/>
+</Snippets>

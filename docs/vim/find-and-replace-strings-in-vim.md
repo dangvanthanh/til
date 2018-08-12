@@ -2,7 +2,13 @@
 
 ### Replace all
 
-> Replace all `foo` to `bar`
+> Replace `foo` to `bar` in current line
+
+```
+:s/foo/bar/g
+```
+
+> Replace all `foo` to `bar` in the whole file
 
 ```
 :%s/foo/bar/g
