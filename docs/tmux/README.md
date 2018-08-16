@@ -1,3 +1,6 @@
-# Tmux
-
-- [Kill all Tmux session](/tmux/kill-all-tmux-sessions.html)
+<Snippets>
+  <Snippet
+    href="/tmux/kill-all-tmux-sessions.html"
+    code=""
+    title="Kill all Tmux session"/>
+</Snippets>

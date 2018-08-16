@@ -1,5 +1,5 @@
 <template>
-  <article class="bg-white shadow rounded-lg overflow-hidden">
+  <article class="bg-white shadow-lg rounded-lg overflow-hidden">
     <div class="overflow-hidden h-48 relative">
       <div class="h-full">
         <pre class="h-full">

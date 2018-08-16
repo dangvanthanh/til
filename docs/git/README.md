@@ -1,3 +1,6 @@
-## Git
-
-- [Basic commands in Git](/git/basic-commands.html)
+<Snippets>
+  <Snippet
+    href="/git/basic-commands.html"
+    code=""
+    title="Basic commands in Git"/>
+</Snippets>

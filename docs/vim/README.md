@@ -1,6 +1,23 @@
-# Vim
+<Snippets>
 
-- [Split navgations](/vim/split-navigations-in-vim.html)
-- [Find and replace string](/vim/find-and-replace-strings-in-vim.html)
-- [Neovim](/vim/neovim.html)
-- [Comment in Vim](/vim/comment-in-vim.html)
+<Snippet
+    href="/vim/split-navigations-in-vim.html"
+    code=""
+    title="Split navgations"/>
+
+<Snippet
+    href="/vim/find-and-replace-strings-in-vim.html"
+    code=""
+    title="Find and replace string"/>
+
+<Snippet
+    href="/vim/neovim.html"
+    code=""
+    title="Neovim"/>
+  
+ <Snippet
+    href="/vim/comment-in-vim.html"
+    code=""
+    title="Comment in Vim"/>
+
+</Snippets>

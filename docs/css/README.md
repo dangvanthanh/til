@@ -1,5 +1,17 @@
-# CSS
-
-- [The Basic CSS Parsing](/css/the-basic-css-parsing.html)
-- [Display link has attribute](/css/display-link-has-attribute.html)
-- [Shapes in CSS](/css/shapes-in-css.md)
+<Snippets>
+  <Snippet 
+    href="/css/the-basic-css-parsing.html" 
+    code="" 
+    title="The Basic CSS Parsing"/>
+    
+  <Snippet 
+    href="/css/display-link-has-attribute.html" 
+    code="" 
+    title="Display link has attribute"/>
+    
+  <Snippet 
+    href="/css/shapes-in-css.md" 
+    code="" 
+    title="Shapes in CSS"/>
+    
+</Snippets>
