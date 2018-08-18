@@ -29,4 +29,9 @@
     code="" 
     title="Spirograph"/>
 
+<Snippet 
+    href="/canvas/circle-packing.html" 
+    code="" 
+    title="Circle Packing"/>
+
 </Snippets>
