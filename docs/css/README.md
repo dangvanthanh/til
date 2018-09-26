@@ -10,7 +10,7 @@
     title="Display link has attribute"/>
     
   <Snippet 
-    href="/css/shapes-in-css.md" 
+    href="/css/shapes-in-css.html" 
     code="" 
     title="Shapes in CSS"/>
     

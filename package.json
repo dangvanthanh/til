@@ -4,20 +4,24 @@
   "description": "Today I Learned",
   "main": "index.js",
   "dependencies": {
-    "husky": "^0.14.3",
-    "lorem-ipsum": "^1.0.5",
-    "prettier": "^1.13.5",
-    "pretty-quick": "^1.6.0",
-    "vuepress": "^0.12.0"
+    "husky": "^1.0.0",
+    "lorem-ipsum": "^1.0.6",
+    "prettier": "^1.14.3",
+    "pretty-quick": "^1.7.0",
+    "vuepress": "^0.14.4"
   },
   "devDependencies": {
     "axios": "^0.18.0",
     "date-fns": "^1.29.0"
   },
   "scripts": {
-    "precommit": "pretty-quick --staged",
     "dev": "vuepress dev docs",
     "release": "vuepress build docs && surge docs/.vuepress/dist"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "repository": {
     "type": "git",

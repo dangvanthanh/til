@@ -20,7 +20,9 @@ module.exports = {
       { text: 'Canvas', link: '/canvas/' },
       { text: 'Git', link: '/git/' },
       { text: 'Vim', link: '/vim/' },
-      { text: 'Tmux', link: '/tmux/' }
+      { text: 'Tmux', link: '/tmux/' },
+      { text: 'Linux', link: '/linux/' },
+      { text: 'Mac OS', link: '/macos/' }
     ]
   }
 };

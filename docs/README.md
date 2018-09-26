@@ -1,13 +1,16 @@
 ---
 home: true
 features:
-- title: Node.js
-- title: JavaScript
-- title: Vue.js
-- title: CSS
-- title: Canvas
-- title: Git
-- title: Vim
-- title: Tmux
-- title: Elm
+  - title: CSS3
+  - title: HTML5
+  - title: JavaScript
+  - title: Canvas
+  - title: Vue.js
+  - title: Node.js
+  - title: Git
+  - title: Vim
+  - title: Tmux
+  - title: Elm
+  - title: Linux
+  - title: Mac OS
 ---
