@@ -2,10 +2,15 @@
 
 ## Categories
 
-- [Node.js](#nodejs)
+- [CSS3](#css)
+- [HTML5](#)
 - [JavaScript](#javascript)
+- [Canvas](#canvas)
 - [Vue.js](#vuejs)
-- [CSS](#css)
+- [Node.js](#nodejs)
 - [Git](#git)
 - [Vim](#vim)
 - [Tmux](#tmux)
+- [Elm](#elm)
+- [Linux](#linux)
+- [Mac OS](#macos)
