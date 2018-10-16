@@ -57,5 +57,10 @@
 <Snippet 
       href="/javascript/detect-internet-explorer.html" 
       code="" 
-      title="Detect Internet Explorer"/>  
+      title="Detect Internet Explorer"/>
+
+<Snippet 
+      href="/javascript/async-await-array-map.html" 
+      code="" 
+      title="Async/Await Array Map"/>
 </Snippets>
