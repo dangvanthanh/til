@@ -63,4 +63,9 @@
       href="/javascript/async-await-array-map.html" 
       code="" 
       title="Async/Await Array Map"/>
+
+<Snippet 
+      href="/javascript/searching-and-sorting-text-diacritics.html" 
+      code="" 
+      title="Searching and Sorting Text Diacritics"/>
 </Snippets>
