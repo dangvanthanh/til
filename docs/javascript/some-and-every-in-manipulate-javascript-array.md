@@ -1,0 +1,76 @@
+# `.some()` and `.every()` In Manipulate JavaScript Array
+
+Implement `add()` function is given mixed input (integers, float, undefined, string...)
+
+```javascript
+const add = (...entries) => {
+  return entries.filter(Number.isInteger).reduce((sum, int) => {
+    return sum + int;
+  }, 0);
+};
+```
+
+or get better solution
+
+```javascript
+const add = (...entries) => {
+  return entries.reduce((sum, entry) => {
+    if (Number.isInteger(entry)) {
+      return sum + entry;
+    }
+    return sum;
+  }, 0);
+};
+```
+
+## Enter `.some()`
+
+```javascript
+const add = (...entries) => {
+  let theSum = 0;
+  if (hasTwoOrMoreInts(entries)) {
+    // there are >= 2 integers, lets sum them
+    theSum = entries.reduce((sum, entry) => {
+      if (Number.isInteger(entry)) {
+        return sum + entry;
+      }
+      return sum;
+    }, 0);
+  }
+  return theSum;
+};
+
+const hasTwoOrMoreInts = entries => {
+  let lastIndex = -1;
+  let hasMinimumIntsCount = false;
+
+  const hasAnInt = entries.some((entry, index) => {
+    lastIndex = index;
+    return Number.isInteger(entry);
+  });
+
+  if (hasAnInt === true) {
+    // we've got one int, is there another?
+    const hasMoreInts = entries.slice(lastIndex + 1).some(Number.isInteger);
+    hasMinimumIntsCount = hasMoreInts === true && hasAnInt;
+  }
+
+  return hasMinimumIntsCount;
+};
+```
+
+## Enter `.every()`
+
+```javascript
+const add = (...entries) => {
+  let theSum = 0;
+  const areAllInts = entries.every(Number.isInteger);
+  if (areAllInts === true) {
+    // are these indeed all ints?
+    theSum = entries.reduce((sum, int) => {
+      return sum + int;
+    }, 0);
+  }
+  return theSum;
+};
+```

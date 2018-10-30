@@ -68,4 +68,9 @@
       href="/javascript/searching-and-sorting-text-diacritics.html" 
       code="" 
       title="Searching and Sorting Text Diacritics"/>
+
+<Snippet 
+      href="/javascript/some-and-every-in-manipulate-javascript-array.html" 
+      code="" 
+      title="Some and Every In Manipulate JavaScript Array"/>
 </Snippets>
