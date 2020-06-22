@@ -2,11 +2,11 @@
   <div>
     <div>
       <h3>Tag Input</h3>
-      <tags v-model="tags"/>
+      <tags v-model="tags" />
     </div>
     <div>
       <h3>Calendar</h3>
-      <calendar v-model="selectedDate"/>
+      <calendar v-model="selectedDate" />
       <div>Selected Date: {{ this.selectedDate | formatDate }}</div>
     </div>
   </div>
@@ -29,15 +29,15 @@ export default {
         'Canvas',
         'Git',
         'Vim',
-        'Tmux'
+        'Tmux',
       ],
-      selectedDate: new Date('2018-06-06T21:00:00.000Z')
+      selectedDate: new Date('2018-06-06T21:00:00.000Z'),
     };
   },
   filters: {
     formatDate(date) {
-      return format(date, 'MM/DD/YYYY');
-    }
-  }
+      return format(date, 'MM/dd/yyyy');
+    },
+  },
 };
 </script>

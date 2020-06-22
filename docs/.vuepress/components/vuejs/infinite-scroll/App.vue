@@ -2,7 +2,7 @@
   <div>
     <div class="person" v-for="person in persons">
       <figure>
-        <img :src="person.picture.large" alt="">
+        <img :src="person.picture.large" alt="" />
       </figure>
       <figcaption>
         <p class="ttu">{{ person.name.first }} {{ person.name.last }}</p>
@@ -11,12 +11,13 @@
             <strong>Birthday:</strong> {{ person.dob.date | formatCurrentDate }}
           </li>
           <li class="ttc">
-            <strong>Location:</strong> {{ person.location.city }}, {{ person.location.state }}
+            <strong>Location:</strong> {{ person.location.city }},
+            {{ person.location.state }}
           </li>
         </ul>
       </figcaption>
     </div>
-  </div>  
+  </div>
 </template>
 
 <script>
@@ -30,18 +31,18 @@ const getRandomUser = () => {
 export default {
   data() {
     return {
-      persons: []
+      persons: [],
     };
   },
   filters: {
     formatCurrentDate(date) {
-      return format(date, 'DD/MM/YYYY');
-    }
+      return format(date, 'dd/MM/yyyy');
+    },
   },
   methods: {
     getInitialUsers() {
       for (let i = 0; i < 5; i++) {
-        getRandomUser().then(response => {
+        getRandomUser().then((response) => {
           this.persons.push(response.data.results[0]);
         });
       }
@@ -53,19 +54,19 @@ export default {
           document.documentElement.offsetHeight;
 
         if (bottomOfWindow) {
-          getRandomUser().then(response => {
+          getRandomUser().then((response) => {
             person.push(response.data.results[0]);
           });
         }
       };
-    }
+    },
   },
   beforeMount() {
     this.getInitialUsers();
   },
   mounted() {
     this.scroll(this.persons);
-  }
+  },
 };
 </script>
 

@@ -4,15 +4,15 @@
   "description": "Today I Learned",
   "main": "index.js",
   "dependencies": {
-    "husky": "^1.0.0",
-    "lorem-ipsum": "^1.0.6",
-    "prettier": "^1.14.3",
-    "pretty-quick": "^1.7.0",
-    "vuepress": "^0.14.4"
+    "husky": "^4.2.5",
+    "lorem-ipsum": "^2.0.3",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "vuepress": "^1.5.2"
   },
   "devDependencies": {
-    "axios": "^0.18.0",
-    "date-fns": "^1.29.0"
+    "axios": "^0.19.2",
+    "date-fns": "^2.14.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",

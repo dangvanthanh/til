@@ -6,7 +6,10 @@
           <code>{{ code }}</code>
         </pre>
       </div>
-      <a :href="href" class="absolute pin shadow-lg"></a>
+      <a
+        :href="href"
+        class="absolute top-0 left-0 bottom-0 right-0 shadow-lg"
+      ></a>
     </div>
     <div class="p-4">
       <h3>{{ title }}</h3>
@@ -18,6 +21,6 @@
 <script>
 export default {
   name: 'Snippet',
-  props: ['href', 'code', 'title', 'description']
+  props: ['href', 'code', 'title', 'description'],
 };
 </script>

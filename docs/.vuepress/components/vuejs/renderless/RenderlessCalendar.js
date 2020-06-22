@@ -10,32 +10,32 @@ import {
   addWeeks,
   startOfWeek,
   endOfWeek,
-  isSameMonth
+  isSameMonth,
 } from 'date-fns';
 
-const dateToDayObjects = dateValue => ({
+const dateToDayObjects = (dateValue) => ({
   dateValue,
-  label: getDate(dateValue)
+  label: getDate(dateValue),
 });
 
 export default {
   props: {
     defaultFormat: {
       type: String,
-      default: 'MM/DD/YY'
+      default: 'MM/dd/yyyy',
     },
     value: {
-      type: Date
-    }
+      type: Date,
+    },
   },
   model: {
     prop: 'value',
-    event: 'change'
+    event: 'change',
   },
   data() {
     return {
       date: this.value,
-      selectedDate: this.value
+      selectedDate: this.value,
     };
   },
   render(h) {
@@ -49,7 +49,7 @@ export default {
       setSelectedDate: this.setSelectedDate,
       pickDate: this.pickDate,
       date: this.date,
-      selectedDate: this.selectedDate
+      selectedDate: this.selectedDate,
     });
   },
   methods: {
@@ -160,18 +160,18 @@ export default {
       }
       this.date = date;
       this.selectedDate = date;
-    }
+    },
   },
   created() {
     this.$watch(
       'value',
-      newVal => {
+      (newVal) => {
         if (newVal !== this.date) {
           this.date = newVal;
         }
       },
       {
-        immediate: true
+        immediate: true,
       }
     );
   },
@@ -186,6 +186,6 @@ export default {
       if (newVal !== this.selectedDate) {
         this.selectedDate = newVal;
       }
-    }
-  }
+    },
+  },
 };

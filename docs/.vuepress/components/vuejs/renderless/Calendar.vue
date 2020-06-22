@@ -1,12 +1,13 @@
 <template>
-  <renderless-calendar 
-  :value="value"
-   @change="value => $emit('change', value)">
-   <div class="calendar" slot-scope="props">
+  <renderless-calendar
+    :value="value"
+    @change="(value) => $emit('change', value)"
+  >
+    <div class="calendar" slot-scope="props">
       <div class="calendar__header">
         <button @click="setDatePrevMonth(props)">&lt;</button>
 
-        <span>{{formatCurrentDate(props)}}</span>
+        <span>{{ formatCurrentDate(props) }}</span>
 
         <button @click="setDateNextMonth(props)">&gt;</button>
       </div>
@@ -22,25 +23,27 @@
           <div class="day">Sat</div>
         </div>
 
-        <div v-for="(week, index) in props.getWeeksInMonth()" 
-        class="week"
-        :key="index">
-
-            <div v-for="day in week"
-                class="day"
-                :key="day.label"
-                :disabled="isDisabled(props, day.dateValue)"
-                @click="handleDayClick(props, day)"
-                :class="{
-                  'is-selected': isSelectedDay(props, day.dateValue),
-                  'is-today': isToday(day.dateValue)
-                }"
-              >
-                {{day.label}}
-              </div>
+        <div
+          v-for="(week, index) in props.getWeeksInMonth()"
+          class="week"
+          :key="index"
+        >
+          <div
+            v-for="day in week"
+            class="day"
+            :key="day.label"
+            :disabled="isDisabled(props, day.dateValue)"
+            @click="handleDayClick(props, day)"
+            :class="{
+              'is-selected': isSelectedDay(props, day.dateValue),
+              'is-today': isToday(day.dateValue),
+            }"
+          >
+            {{ day.label }}
+          </div>
         </div>
-     </div>
-   </div>
+      </div>
+    </div>
   </renderless-calendar>
 </template>
 <script>
@@ -50,15 +53,15 @@ export default {
   name: 'simple-calendar',
   props: {
     value: {
-      type: [String, Date]
-    }
+      type: [String, Date],
+    },
   },
   model: {
     prop: 'value',
-    event: 'change'
+    event: 'change',
   },
   components: {
-    RenderlessCalendar
+    RenderlessCalendar,
   },
   methods: {
     isToday,
@@ -73,18 +76,18 @@ export default {
       setDate(getDatePrevMonth());
     },
     formatCurrentDate({ getFormattedDate }) {
-      return getFormattedDate('MMMM YYYY');
+      return getFormattedDate('MMMM yyyy');
     },
     isSelectedDay({ selectedDate, getFormattedDate }, date) {
       return getFormattedDate(selectedDate) === getFormattedDate(date);
     },
     handleDayClick(props, day) {
-      const isDisabled = dateValue => !isSameMonth(props.date, dateValue);
+      const isDisabled = (dateValue) => !isSameMonth(props.date, dateValue);
       return isDisabled(day.dateValue)
         ? null
         : props.setSelectedDate(day.dateValue);
-    }
-  }
+    },
+  },
 };
 </script>
 
