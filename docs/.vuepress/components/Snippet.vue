@@ -8,7 +8,7 @@
       </div>
       <a
         :href="href"
-        class="absolute top-0 left-0 bottom-0 right-0 shadow-lg"
+        class="absolute top-0https://github.com/dangvanthanh/til.git left-0 bottom-0 right-0 shadow-lg"
       ></a>
     </div>
     <div class="p-4">
