@@ -4,19 +4,19 @@
   "description": "Today I Learned",
   "main": "index.js",
   "dependencies": {
-    "husky": "^4.2.5",
+    "husky": "^4.3.6",
     "lorem-ipsum": "^2.0.3",
-    "prettier": "^2.0.5",
-    "pretty-quick": "^2.0.1",
-    "vuepress": "^1.5.2"
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "vuepress": "^1.8.0"
   },
   "devDependencies": {
-    "axios": "^0.19.2",
-    "date-fns": "^2.15.0"
+    "axios": "^0.21.1",
+    "date-fns": "^2.16.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "release": "vuepress build docs && surge docs/.vuepress/dist"
+    "release": "vuepress build docs && npx surge docs/.vuepress/dist"
   },
   "husky": {
     "hooks": {

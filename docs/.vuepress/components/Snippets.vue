@@ -1,12 +1,12 @@
 <template>
   <div class="grid">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Snippets'
+  name: 'Snippets',
 };
 </script>
 
