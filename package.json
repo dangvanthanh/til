@@ -1,45 +1,32 @@
 {
   "name": "til",
+  "type": "module",
   "version": "0.0.1",
-  "description": "Today I Learned",
-  "main": "index.js",
-  "dependencies": {
-    "husky": "^4.3.6",
-    "lorem-ipsum": "^2.0.3",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
-    "vuepress": "^1.8.0"
-  },
-  "devDependencies": {
-    "axios": "^0.21.1",
-    "date-fns": "^2.16.1"
-  },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "release": "vuepress build docs && npx surge docs/.vuepress/dist"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dangvanthanh/til.git"
-  },
-  "keywords": [
-    "nodejs",
-    "javascript",
-    "vue",
-    "css",
-    "git",
-    "vim",
-    "tmux"
-  ],
-  "author": "Dang Van Thanh <chieuhue@gmail.com> (dangthanh.org)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dangvanthanh/til/issues"
-  },
-  "homepage": "https://github.com/dangvanthanh/til#readme"
+  "dependencies": {
+    "@astrojs/mdx": "^0.19.7",
+    "@astrojs/partytown": "^1.2.3",
+    "@astrojs/preact": "^2.2.2",
+    "@astrojs/react": "^2.3.2",
+    "@astrojs/solid-js": "^2.2.1",
+    "@astrojs/svelte": "^3.1.1",
+    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/vue": "^2.2.1",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^2.10.13",
+    "preact": "^10.6.5",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "solid-js": "^1.4.3",
+    "svelte": "^4.0.0",
+    "tailwindcss": "^3.0.24",
+    "vue": "^3.2.30"
+  }
 }
