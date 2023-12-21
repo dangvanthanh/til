@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
@@ -13,8 +13,22 @@ import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    viewTransitions: true
-  },
-  integrations: [react(), tailwind(), partytown(), preact(), solidJs(), svelte(), vue(), mdx(), alpinejs(), lit()]
+  integrations: [
+    react({
+      include: ["**/react/*"],
+    }),
+    tailwind(),
+    partytown(),
+    preact({
+      include: ["**/preact/*"],
+    }),
+    solidJs({
+      include: ["**/solid/*"],
+    }),
+    svelte(),
+    vue(),
+    mdx(),
+    alpinejs(),
+    lit(),
+  ],
 });
