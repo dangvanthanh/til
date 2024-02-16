@@ -1,0 +1,35 @@
+---
+title: Avif and WebP
+tags: [cli]
+---
+
+## CLI
+
+### ImageMagick
+
+ImageMagick is one of the most popular open-source software mainly for command-line image editing and manipulation.
+
+```
+# AVIF
+magick -quality 75 image.png image.avif
+
+# WebP
+magick -quality 75 image.png image.webp
+```
+
+## FFmpeg
+
+FFmpeg is mainly a video/audio processing tool, but it is useful for images too.
+
+```
+# AVIF
+ffmpeg -i image.png -quality 75 image.avif
+
+# WebP
+ffmpeg -i image.png -quality 75 image.webp
+```
+
+## Online Tools
+
+- AVIF and WebP: Use [https://convertimg.online](https://convertimg.online) to convert from any image format to AVIF and WebP.
+- PNG: For the rare cases when you can’t use WebP or AVIF for some reason, utilize [https://tinypng.com/](https://tinypng.com/) to optimize PNG files effectively.

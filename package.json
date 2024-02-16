@@ -1,45 +1,45 @@
 {
-  "name": "til",
-  "version": "0.0.1",
-  "description": "Today I Learned",
-  "main": "index.js",
-  "dependencies": {
-    "husky": "^4.3.6",
-    "lorem-ipsum": "^2.0.3",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
-    "vuepress": "^1.8.0"
-  },
-  "devDependencies": {
-    "axios": "^0.21.1",
-    "date-fns": "^2.16.1"
-  },
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "release": "vuepress build docs && npx surge docs/.vuepress/dist"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dangvanthanh/til.git"
-  },
-  "keywords": [
-    "nodejs",
-    "javascript",
-    "vue",
-    "css",
-    "git",
-    "vim",
-    "tmux"
-  ],
-  "author": "Dang Van Thanh <chieuhue@gmail.com> (dangthanh.org)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dangvanthanh/til/issues"
-  },
-  "homepage": "https://github.com/dangvanthanh/til#readme"
+	"name": "til",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"prepare": "panda codegen",
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"lint": "pnpm dlx @biomejs/biome check ./src --apply",
+		"format": "pnpm dlx @biomejs/biome format ./src --write"
+	},
+	"dependencies": {
+		"@astrojs/alpinejs": "^0.4.0",
+		"@astrojs/lit": "^4.0.1",
+		"@astrojs/mdx": "^2.1.1",
+		"@astrojs/partytown": "^2.0.4",
+		"@astrojs/preact": "^3.1.0",
+		"@astrojs/react": "^3.0.10",
+		"@astrojs/solid-js": "^4.0.1",
+		"@astrojs/svelte": "^5.0.3",
+		"@astrojs/vue": "^4.0.8",
+		"@webcomponents/template-shadowroot": "^0.2.1",
+		"alpinejs": "^3.13.5",
+		"astro": "^4.4.0",
+		"lit": "^3.1.2",
+		"preact": "^10.19.5",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"solid-js": "^1.8.15",
+		"svelte": "^4.2.11",
+		"vue": "^3.4.19"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@pandacss/dev": "^0.30.2",
+		"@types/alpinejs": "^3.13.6",
+		"@types/react": "^18.2.55",
+		"@types/react-dom": "^18.2.19",
+		"prettier": "^3.2.5",
+		"prettier-plugin-astro": "^0.13.0"
+	}
 }

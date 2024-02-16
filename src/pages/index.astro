@@ -1,0 +1,50 @@
+---
+import Layout from '@/layouts/layout.astro'
+import { getCollection } from 'astro:content'
+import { css } from '@/styled-system/css'
+import { flex, grid } from '@/styled-system/patterns'
+
+const title = 'Home'
+
+const posts = await getCollection('posts')
+---
+
+<Layout title={title}>
+  <div class={css({ w: 'full', maxW: '7xl', mx: 'auto' })}>
+    <div class={grid({ columns: { base: 1, md: 2, lg: 3 }, gap: 6, my: 8 })}>
+      {
+        posts.map((post) => (
+          <div class={css({ shadow: 'md' })}>
+            <div class={css({ p: 6 })}>
+              <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+            </div>
+            <div
+              class={flex({
+                gap: 2,
+                p: 3,
+                borderTopWidth: '1px',
+                borderTopColor: 'gray.200',
+              })}
+            >
+              {post.data.tags.map((tag: unknown) => (
+                <a
+                  href={`/tag/${tag}`}
+                  class={css({
+                    bg: 'gray.100',
+                    rounded: 'full',
+                    px: 3,
+                    py: 1,
+                    textStyle: 'sm',
+                    color: 'gray.500',
+                  })}
+                >
+                  #{tag}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
