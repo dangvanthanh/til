@@ -35,9 +35,9 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.5.3",
-		"@pandacss/dev": "^0.30.2",
+		"@pandacss/dev": "^0.31.0",
 		"@types/alpinejs": "^3.13.6",
-		"@types/react": "^18.2.55",
+		"@types/react": "^18.2.56",
 		"@types/react-dom": "^18.2.19",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0"
