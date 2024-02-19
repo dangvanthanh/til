@@ -1,0 +1,27 @@
+---
+title: Composables as State Management in Vue
+tags: [javascript, vue]
+---
+
+In some scenenarios, shared state between instances is desired. This can be archived by declaring the state outside the composable function.
+
+```javascript
+import { ref } from 'vue'
+
+// state declared here will be shared
+const shareState = ref()
+
+export function useComposable() {
+  // state declared here will NOT be shared
+  // and will be initialized every time
+  const localState = ref()
+
+  // Setters and getters for both
+  // can be defined here
+  
+  return {
+    sharedState,
+    localState
+  }
+}
+```

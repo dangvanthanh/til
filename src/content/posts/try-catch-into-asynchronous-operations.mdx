@@ -1,0 +1,23 @@
+---
+title: Try Catch Into Asynchronous Operations
+tags: [javascript]
+---
+
+Approach involves integrating error handling direct into asynchoronous operations using callbacks, Promises or the modern async/await syntax.
+
+```javascript
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    try {
+      throw new Error('whoops')
+    } catch (err) {
+      reject(err)
+    }
+  })
+}).then(() => {
+    // handle successfull execution
+  })
+  .catch((err) => {
+    console.log(err) // error is caught here
+  })
+```
