@@ -1,0 +1,80 @@
+---
+title: Resize Image Upload With JavaScript
+tags: [javascript]
+---
+
+```javascript
+export function resizeImage(image, maxWidth, maxHeight) {
+  let scale = 1
+  let width = image.naturalWidth
+  let height = image.naturalHeight
+
+  if (width > maxWidth) {
+    scale = image.width / maxWidth
+    width = maxWidth
+    height = image.height / scale
+  }
+
+  if (height > maxHeight) {
+    scale = image.height / maxHeight
+    height = maxHeight
+    width = image.width / scale
+  }
+
+  width = Math.floor(width)
+  height = Math.floor(height)
+
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+
+  const context = canvas.getContext('2d')
+  context.drawImage(image, 0, 0, width, height)
+
+  return canvas.toDataURL()
+}
+```
+
+Use this function
+
+```javascript
+const MAX_WIDTH = 300
+const MAX_HEIGHT = 300
+
+let imageInput = document.getElementById('imageInput')
+
+imageInput.addEventListener('change', (e) => {
+  if (e.target.files.length > 0) {
+    let imageFile = e.target.files[0]
+
+    const reader = new FileReader()
+
+    reader.onload = (e) => {
+      const img = new Image()
+
+      image.onload = () => {
+        const dataUrl = resizeImage(image, MAX_WIDTH, MAX_HEIGHT)
+
+        if (dataUrl.length === 0) {
+          return
+        }
+
+        let resizedImage = document.getElementById('imagePreview') ?? new Image()
+        resizedImage.setAttribute('id', 'imagePreview')
+        resizedImage.setAttribute('alt', 'Preview')
+        resizedImage.src = dataUrl
+
+        document.getElementById('imageContainer').appendChild(resizedImage)
+      
+        hiddenInput = document.getElementById('hiddenInput')
+        hiddenInput.value = dataUrl
+        hidden.dispatchEvent(new Event('input', { bubble: true}))
+      }
+
+      image.src = e.target.result
+    }
+
+    reader.readAsDataURL(imageFile)
+  }
+})
+```
