@@ -14,14 +14,30 @@ const posts = await getCollection('posts')
     <div class={grid({ columns: { base: 1, md: 2, lg: 3 }, gap: 6, my: 8 })}>
       {
         posts.map((post) => (
-          <div class={css({ shadow: 'md' })}>
+          <div
+            class={css({
+              display: 'flex',
+              flexDirection: 'column',
+              bg: 'white',
+              borderWidth: '1px',
+              borderColor: 'gray.200',
+              shadow: 'md',
+              rounded: 'md',
+            })}
+          >
             <div class={css({ p: 6 })}>
-              <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+              <a
+                href={`/posts/${post.slug}`}
+                class={css({ fontSize: 'lg', fontWeight: 500 })}
+              >
+                {post.data.title}
+              </a>
             </div>
             <div
               class={flex({
-                gap: 2,
-                p: 3,
+                mt: 'auto',
+                gap: 4,
+                p: 4,
                 borderTopWidth: '1px',
                 borderTopColor: 'gray.200',
               })}
@@ -30,12 +46,12 @@ const posts = await getCollection('posts')
                 <a
                   href={`/tag/${tag}`}
                   class={css({
-                    bg: 'gray.100',
                     rounded: 'full',
                     px: 3,
                     py: 1,
                     textStyle: 'sm',
                     color: 'gray.500',
+                    bg: 'gray.100',
                   })}
                 >
                   #{tag}

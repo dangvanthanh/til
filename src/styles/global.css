@@ -1,13 +1,56 @@
-pre.astro-code {
+article > *:first-child,
+article * + * {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 0.625rem;
+  font-weight: 700;
+}
+
+article h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+article h3 {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+article table {
+  width: 100%;
+}
+
+article thead {
+  background-color: var(--colors-gray-200);
+}
+
+article th,
+article td {
+  border: 1px solid var(--colors-gray-300);
+  padding: 0.5rem;
+}
+
+article th {
+  font-weight: 600;
+  text-align: left;
+}
+
+article pre.astro-code {
   position: relative;
   z-index: 1;
-  margin: 0;
   padding: 1rem;
   background: transparent;
   overflow-x: auto;
+  border-radius: 0.5rem;
 }
 
-pre.astro-code code {
+article pre.astro-code code {
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -16,7 +59,7 @@ pre.astro-code code {
   word-wrap: normal;
   tab-size: 4;
   hyphens: none;
-  font-family: "JetBrains Mono", monospace;
+  font-family: 'JetBrains Mono', monospace;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;

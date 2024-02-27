@@ -10,6 +10,8 @@ interface Props {
   description?: string
 }
 
+const today = new Date()
+
 const { title, description } = Astro.props
 ---
 
@@ -59,14 +61,41 @@ const { title, description } = Astro.props
     />
     <ViewTransitions />
   </head>
-  <body>
+  <body class={css({ bg: 'gray.100' })}>
     <div class={flex({ direction: 'column', minH: '100vh' })}>
       <header role="banner" class={css({ py: 6 })}>
-        <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
-          <a href="/">TIL</a>
+        <div
+          class={css({
+            display: 'flex',
+            justifyContent: 'center',
+            w: 'full',
+            maxW: '5xl',
+            mx: 'auto',
+          })}
+        >
+          <a
+            href="/"
+            class={css({
+              fontSize: '5xl',
+              fontWeight: 700,
+              transform: 'skewY(-1deg)',
+            })}>Today I Learned</a
+          >
         </div>
       </header>
-      <slot />
+      <main role="main">
+        <slot />
+      </main>
+      <footer role="contentinfo" class={css({ py: 6 })}>
+        <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
+          &copy; {today.getFullYear()}. Made with <span>❤</span>&nbsp;
+          <a
+            href="https://astro.build/"
+            target="_blank"
+            rel="noopener noreferrer">Astro</a
+          >
+        </div>
+      </footer>
     </div>
   </body>
 </html>

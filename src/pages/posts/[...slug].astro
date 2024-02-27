@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '@/layouts/layout.astro'
 import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
 
 export async function getStaticPaths() {
   const postEntries = await getCollection('posts')
@@ -17,7 +18,39 @@ const { Content } = await entry.render()
 
 <Layout title={entry.data.title}>
   <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
-    <h1>{entry.data.title}</h1>
-    <Content />
+    <div
+      class={css({
+        bg: 'white',
+        borderWidth: '1px',
+        borderColor: 'gray.200',
+        shadow: 'md',
+        rounded: 'md',
+        p: 6,
+      })}
+    >
+      <h1>{entry.data.title}</h1>
+      <div class={flex({ mb: 6, gap: 1 })}>
+        {
+          entry.data.tags.map((tag: unknown) => (
+            <a
+              href={`/tag/${tag}`}
+              class={css({
+                rounded: 'full',
+                px: 3,
+                py: 1,
+                textStyle: 'sm',
+                color: 'gray.500',
+                bg: 'gray.100',
+              })}
+            >
+              #{tag}
+            </a>
+          ))
+        }
+      </div>
+      <article>
+        <Content />
+      </article>
+    </div>
   </div>
 </Layout>
