@@ -1,0 +1,23 @@
+---
+title: Mix terminated by signal SIGSEGV 
+tags: [elixir, phoenix, fish]
+---
+
+When you try run `mix --version` in terminal (example fish shell). But it made this error:
+
+```shell
+fish: Job 1, 'mix --version' terminated by signal SIGSEGV
+````
+
+This is the way to fix it:
+
+```shell
+# Erlang
+set -xg KERL_CONFIGURE_OPTIONS "--disable-jit"
+asdf install erlang 25.2.3
+asdf global erlang 25.2.3
+
+# Elixir
+asdf install elixir 1.14.3-otp-25
+asdf global elixir 1.14.3-otp-25
+```
