@@ -7,7 +7,7 @@ tags: [javascript]
 
 Using `var`
 
-```javascript
+```js
 function test() {
   foo = 2;
 
@@ -22,7 +22,7 @@ console.log(foo); // foo is not defined
 
 But if you using `let`
 
-```javascript
+```js
 function test() {
   foo = 2;
 
@@ -37,7 +37,7 @@ console.log(foo); // 2
 
 Using `const`
 
-```javascript
+```js
 var foo = 3;
 foo = ['abc', 'def']; // foo is now bound to an array object
 
@@ -47,7 +47,7 @@ bar = ['abc', 'def']; // TypeError: assignment to const variable
 
 ### Arrow functions and lexical this
 
-```javascript
+```js
 [5, 10, 15, 20]
   .forEach(function(number, ind) {
     console.log(number);
@@ -63,7 +63,7 @@ bar = ['abc', 'def']; // TypeError: assignment to const variable
 
 ### Classes
 
-```javascript
+```js
 class Vehicle {
   constructor(type, color) {
     this.type = type;
@@ -78,7 +78,7 @@ class Vehicle {
 
 ### Object-literal Improvements
 
-```javascript
+```js
 function getLaptop(make, model, year) {
   return {
     make,
@@ -92,7 +92,7 @@ getLaptop('Apple', 'Macbook', '2014'); // { make: 'Apple', model: 'Macbook', yea
 
 ### Template String Literals
 
-```javascript
+```js
 var city = 'Sai Gon';
 var str = 'I bike around ' + city;
 
@@ -103,7 +103,7 @@ let newStr = 'I bike around ${city}';
 
 #### Generators
 
-```javascript
+```js
 function* Counter() {
   let i = 0;
 
@@ -126,7 +126,7 @@ console.log(gen.next().value); // 2
 
 #### Iterators
 
-```javascript
+```js
 function arrayIterator(arr) {
   var i = 0;
   return {
@@ -149,13 +149,13 @@ console.log(iter.next()); // 2
 
 ### Default Arguments and the Rest Operator
 
-```javascript
+```js
 function request(url, method = 'GET') {
   // Todo
 }
 ```
 
-```javascript
+```js
 function manyArgs(a, b, ...args) {
   // args = ['Hello', 'World', true]
 }
@@ -165,7 +165,7 @@ manyArgs(1, 2, 'Hello', 'World', true);
 
 ### Spread Syntax
 
-```javascript
+```js
 const first = [1, 2, 3, 4];
 const seconds = [-2, -1, 0, ...first, 5, 6, 7];
 
@@ -174,7 +174,7 @@ const arrCopy = [...first]; // [1, 2, 3, 4]
 
 ### Destructuring
 
-```javascript
+```js
 let arr = [1, 2, 3, 4, 5];
 let [a, b, ...rest] = arr;
 console.log(a); // 1

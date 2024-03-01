@@ -5,7 +5,7 @@ tags: [javascript]
 
 Implement `add()` function is given mixed input (integers, float, undefined, string...)
 
-```javascript
+```js
 const add = (...entries) => {
   return entries.filter(Number.isInteger).reduce((sum, int) => {
     return sum + int;
@@ -15,7 +15,7 @@ const add = (...entries) => {
 
 or get better solution
 
-```javascript
+```js
 const add = (...entries) => {
   return entries.reduce((sum, entry) => {
     if (Number.isInteger(entry)) {
@@ -28,7 +28,7 @@ const add = (...entries) => {
 
 ## Enter `.some()`
 
-```javascript
+```js
 const add = (...entries) => {
   let theSum = 0;
   if (hasTwoOrMoreInts(entries)) {
@@ -64,7 +64,7 @@ const hasTwoOrMoreInts = entries => {
 
 ## Enter `.every()`
 
-```javascript
+```js
 const add = (...entries) => {
   let theSum = 0;
   const areAllInts = entries.every(Number.isInteger);

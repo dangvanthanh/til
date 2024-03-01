@@ -1,5 +1,5 @@
 article > *:first-child,
-article * + * {
+article > * + * {
   margin-bottom: 1rem;
 }
 
@@ -41,16 +41,16 @@ article th {
   text-align: left;
 }
 
-article pre.astro-code {
+article pre {
   position: relative;
   z-index: 1;
   padding: 1rem;
   background: transparent;
   overflow-x: auto;
-  border-radius: 0.5rem;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
 }
 
-article pre.astro-code code {
+article pre > code {
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -64,4 +64,54 @@ article pre.astro-code code {
   font-weight: 400;
   font-style: normal;
   font-size: 0.875rem;
+}
+
+article pre > code .line {
+  border-left: 0.5rem solid transparent;
+  padding: 0 0.5rem;
+}
+article pre > code .highlighted {
+  background-color: #2e4c35;
+  border-color: #469458;
+}
+
+article pre > code[data-line-numbers] {
+  counter-reset: line;
+}
+
+article pre > code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  margin-right: 2rem;
+  width: 1rem;
+  text-align: left;
+  color: #7ca2dfad;
+}
+
+article pre > code > .line::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  text-align: right;
+}
+
+article pre > code[data-line-numbers-max-digits='2'] > .line::before {
+  width: 2rem;
+}
+
+article code[data-line-numbers-max-digits='3'] > .line::before {
+  width: 3rem;
+}
+
+article [data-rehype-pretty-code-figure] {
+  position: relative;
+}
+
+article [data-rehype-pretty-code-title] {
+  max-width: max-content;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-color: #1e293b;
+  color: #9abcf3ec;
+  padding: 0.5rem 1rem;
 }

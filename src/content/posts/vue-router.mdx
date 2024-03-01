@@ -7,36 +7,37 @@ In develop a single-page application in Vue.js, the browser doesn't make a reque
 
 ## The router instance
 
-````js
-import App from 'App.vue';
-import router from './router/';
+```js
+import App from 'App.vue'
+import router from './router/'
 
 const app = new Vue({
   el: '#app',
   // introduction the router instance
   router: router,
-  render: h => h(App)
-});```
+  render: (h) => h(App),
+})
+```
 
 The router instance is created by using the Vue Router constructor and passing in an object that contains the key/value pairs for the path and component that should render for that particular path.
 
 ```js
-import Home from 'Home.vue';
-import About from 'About.vue';
+import Home from 'Home.vue'
+import About from 'About.vue'
 
 const router = new Router({
   routes: [
     {
       path: '/',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
-      component: About
-    }
-  ]
-});
-````
+      component: About,
+    },
+  ],
+})
+```
 
 ## router-view
 

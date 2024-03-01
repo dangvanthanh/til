@@ -9,7 +9,7 @@ tags: [javascript]
 
 `includes` is simple instance method on the Array and helps to easily find if an item is exist in the Array (including `NaN` unlike `indexOf`)
 
-```javascript
+```js
 const arr = [1, 2, 3, 4, 5, Nan];
 
 // Use indexOf
@@ -31,7 +31,7 @@ arr.indexOf(Nan); // -1
 
 the `**` instead of `Math.pow`
 
-```javascript
+```js
 Math.pow(7, 2); // 49
 
 7 ** 2; // 49
@@ -43,7 +43,7 @@ Math.pow(7, 2); // 49
 
 `Object.values()` returns all the values of the Objects
 
-```javascript
+```js
 const motobikes = { suzuki: 1, bwm: 2, kawasaki: 3 };
 
 // Use Object.keys()
@@ -59,7 +59,7 @@ console.log(vals); // [1, 2, 3]
 
 `Object.entries()` return both keys and values in the Array
 
-```javascript
+```js
 const bicyles = { giant: 2017, java: 2018, colnago: 2019 };
 
 // Print key and value using Object.keys()
@@ -79,7 +79,7 @@ for (let [key, value] of Object.entries(bicyles)) {
 
 That allow appending either an empty string or some other string to the start of original string
 
-```javascript
+```js
 '5'.padStart(5); //     5
 '5'.padStart(5, '*') // ****5
 
@@ -101,7 +101,7 @@ console.log(formmated);
 That allow prepending either an emptry string or some other string to the end of original string.
 `padEnd` really comes in handy when we are printing multiple items of varying lengths and want to right-align them properly.
 
-```javascript
+```js
 const cars = {
   BWM: '10',
   Tesla: '5',
@@ -119,7 +119,7 @@ Object.entries(car).map(([name, count]) => {
 
 ### Async/Await
 
-```javascript
+```js
 // Promise
 function getAmount(userId) {
   getUser(userId)
@@ -139,7 +139,7 @@ async function getAmount(userId) {
 
 #### Async functions themselves return a Promise
 
-```javascript
+```js
 async function double(a, b) {
   a = await doubleAfter(a);
   b = await doubleAfter(b);
@@ -157,7 +157,7 @@ double(1, 2).then(console.log);
 
 #### Call async/await in parallel
 
-```javascript
+```js
 async function double(a, b) {
   [a, b] = await Promise.all([doubleAfter(a), doubleAfter(b)]);
   return a + b;
@@ -174,7 +174,7 @@ double(1, 2).then(console.log);
 
 #### Error handling async/await functions
 
-```javascript
+```js
 async function double(a, b) {
   try {
     a = await doubleAfter(a);

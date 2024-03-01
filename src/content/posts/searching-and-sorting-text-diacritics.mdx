@@ -3,7 +3,7 @@ title: Searching and Sorting Text Diacritics in JavaScript
 tags: [javascript]
 ---
 
-```javascript
+```js
 const brands = [
   { label: 'Côte et Ciel', value: 1532 },
   { label: 'Études', value: 17 },
@@ -17,13 +17,13 @@ const brands = [
 
 ## Seaching
 
-```javascript
+```js
 brands.filter(brand => {
   return brand.label.indexOf('Cote') > -1;
 });
 ```
 
-```javascript
+```js
 brands.filter(brand => {
   const decomposedLabel = brand.label
     .normalize('NFD')
@@ -35,13 +35,13 @@ brands.filter(brand => {
 
 ## Sorting
 
-```javascript
+```js
 brands.sort((a, b) => {
   return a.label > b.label;
 });
 ```
 
-```javascript
+```js
 brands.sort((a, b) => {
   return a.label.localeCompare(b.label);
 });

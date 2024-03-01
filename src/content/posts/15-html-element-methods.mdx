@@ -5,7 +5,7 @@ tags: [html]
 
 ## Table
 
-```javascript
+```js title="table.js" showLineNumbers
 const tableEl = document.createElement('table');
 
 const headerRow = tableEl.createTHead().insertRow();
@@ -21,13 +21,13 @@ newRow.insertCell().textContent = 'Thank you';
 
 ## scrollIntoView()
 
-```javascript
+```js
 document.querySelector(document.location.hash).scrollIntoView();
 ```
 
 ## hidden
 
-```javascript
+```js
 element.style.display = 'none';
 
 // or
@@ -37,7 +37,7 @@ element.hidden = true;
 
 ## toggle()
 
-```javascript
+```js
 element.classList.toggle('some-class');
 
 // or
@@ -47,19 +47,19 @@ element.classList.toggle('some-class', isGreen === 'green');
 
 ## querySelector
 
-```javascript
+```js
 const body = document.querySelector(document.body);
 ```
 
 ## closest
 
-```javascript
+```js
 element.closest('article').querySelector('h1');
 ```
 
 ## getBoundingClientRect()
 
-```
+```json
 {
   x: 600,
   y: 200,
@@ -74,7 +74,7 @@ element.closest('article').querySelector('h1');
 
 ## matches()
 
-```javascript
+```js
 // Maximum complexity
 if (element.className.indexOf('some-class') > -1) {
 }
@@ -90,7 +90,7 @@ if (element.matches('.some-class')) {
 
 ## insertAdjacentElement()
 
-```javascript
+```js
 parentElement.insertAdjacentElement('beforeend', newElement);
 
 // the same
@@ -100,7 +100,7 @@ parentElement.appendChild(newElement);
 
 ## contains()
 
-```javascript
+```js
 const handlerClick = e => {
   if (!modalElement.contains(e.target)) {
     modalElement.hidden = true;
@@ -110,7 +110,7 @@ const handlerClick = e => {
 
 ## getAttribute()
 
-```javascript
+```js
 element.getAttribute('href');
 ```
 
@@ -140,7 +140,7 @@ dialogCancel.addEventListener('click', function () {
 
 ## forEach()
 
-```javascript
+```js
 document.getElementsByTagName('a').forEach(el => {
   console.log(el.href);
 });
