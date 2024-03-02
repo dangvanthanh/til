@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <div>
     <div class="triangle">
@@ -13,19 +15,18 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'css-shapes-triangle'
-};
-</script>
-
 <style scoped>
 .triangle {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 figure {
-  display: inline-block !important;
+  display: inline-block;
 }
 
 .triangle-top {

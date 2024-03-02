@@ -8,8 +8,6 @@ onMounted(() => {
   const size = window.innerWidth / 2
   const step = 20
 
-  console.log(size)
-
   canvas.width = size
   canvas.height = size
 

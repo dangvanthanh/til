@@ -1,5 +1,7 @@
+<script setup></script>
+
 <template>
-  <div class="tc">
+  <div class="pies">
     <div class="pie pie--0">0%</div>
     <div class="pie pie--25">25%</div>
     <div class="pie pie--50">50%</div>
@@ -8,15 +10,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'css-shapes-pie'
-};
-</script>
-
 <style scoped>
-.tc {
-  text-align: center;
+.pies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 .pie {

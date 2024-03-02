@@ -1,3 +1,0 @@
-# Spirograph
-
-<canvas-art-Spirograph />
