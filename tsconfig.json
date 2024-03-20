@@ -3,8 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/styled-system/*": ["styled-system/*"]
+      "@/*": ["./src/*"],
+      "@/styled-system/*": ["./styled-system/*"]
     }
   },
   "include": ["src", "styled-system"]
