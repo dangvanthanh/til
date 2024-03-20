@@ -1,0 +1,59 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
+
+interface Props {
+	posts: CollectionEntry<'posts'>[]
+	reversed?: boolean
+}
+
+const { posts, reversed } = Astro.props
+
+const wrapperStyle = {
+	justify: 'space-around',
+	minW: '100%',
+	gap: 2,
+	animation: 'scroll 150s linear infinite',
+}
+
+let wrapperClass = flex({
+	...wrapperStyle,
+})
+
+if (reversed) {
+	wrapperClass = flex({
+		...wrapperStyle,
+		animationDirection: 'reverse',
+	})
+}
+
+const postClass = css({
+	px: 3,
+	py: 1,
+	bg: 'white',
+	minW: 100,
+	w: 'full',
+	display: 'flex',
+	whiteSpace: 'nowrap',
+	overflow: 'hidden',
+	borderRadius: 'sm',
+	borderWidth: '1px',
+	borderColor: 'gray.300',
+	boxShadow:
+		'0 .5rem 0 -.1rem var(--colors-gray-300), 0 .55rem 0 var(--colors-gray-200)',
+	color: 'gray.900',
+})
+---
+
+<div class={wrapperClass}>
+  {
+    posts.map((post) => (
+      <div>
+        <a href={`/posts/${post.slug}`} class={postClass}>
+          {post.data.title}
+        </a>
+      </div>
+    ))
+  }
+</div>

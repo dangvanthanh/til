@@ -1,0 +1,22 @@
+---
+title: Your project targets multiple frameworks
+tags: [asp.net core]
+---
+
+When you see error like this: Your project targets multiple frameworks. Please specify which framework to run using '--framework'.
+
+Open `.csproj` file in your IDE and update the following line:
+
+```csharp
+<PropertyGroup>
+    <TargetFrameworks>$(CommonTargetFrameworks)</TargetFrameworks>
+</PropertyGroup>
+```
+
+to
+
+```csharp
+<PropertyGroup>
+    <TargetFramework>$(CommonTargetFrameworks)</TargetFramework>
+</PropertyGroup>
+```

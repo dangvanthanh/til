@@ -3,64 +3,27 @@ import Layout from '@/layouts/layout.astro'
 import { getCollection } from 'astro:content'
 import { css } from '@/styled-system/css'
 import { flex, grid } from '@/styled-system/patterns'
+import MarqueePosts from '@/components/MarqueePosts.astro'
+import Post from '@/components/Post.astro'
 
 const title = 'Home'
 
 const posts = await getCollection('posts')
+const maxPosts = 25
+const postsOne = posts.slice(0, maxPosts)
+const postsTwo = posts.slice(maxPosts)
 ---
 
 <Layout title={title}>
+  <div
+    class={flex({ direction: 'column', gap: 4, overflowX: 'hidden', pb: 6 })}
+  >
+    <MarqueePosts posts={postsOne} />
+    <MarqueePosts posts={postsTwo} reversed={true} />
+  </div>
   <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
     <div class={grid({ columns: { base: 1, md: 2, lg: 3 }, gap: 6, my: 8 })}>
-      {
-        posts.map((post) => (
-          <div
-            class={css({
-              display: 'flex',
-              flexDirection: 'column',
-              bg: 'white',
-              borderWidth: '1px',
-              borderColor: 'gray.200',
-              shadow: 'md',
-              rounded: 'md',
-            })}
-          >
-            <div class={css({ p: 6 })}>
-              <a
-                href={`/posts/${post.slug}`}
-                class={css({ fontSize: 'lg', fontWeight: 500 })}
-              >
-                {post.data.title}
-              </a>
-            </div>
-            <div
-              class={flex({
-                mt: 'auto',
-                gap: 4,
-                p: 4,
-                borderTopWidth: '1px',
-                borderTopColor: 'gray.200',
-              })}
-            >
-              {post.data.tags.map((tag: unknown) => (
-                <a
-                  href={`/tag/${tag}`}
-                  class={css({
-                    rounded: 'full',
-                    px: 3,
-                    py: 1,
-                    textStyle: 'sm',
-                    color: 'gray.500',
-                    bg: 'gray.100',
-                  })}
-                >
-                  #{tag}
-                </a>
-              ))}
-            </div>
-          </div>
-        ))
-      }
+      {posts.map((post) => <Post post={post} />)}
     </div>
   </div>
 </Layout>

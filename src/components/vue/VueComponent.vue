@@ -1,7 +1,7 @@
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const title = ref("Vue Component");
+const title = ref('Vue Component')
 </script>
 
 <template>

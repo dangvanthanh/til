@@ -6,8 +6,8 @@ import '@/styles/panda.css'
 import '@/styles/global.css'
 
 interface Props {
-  title: string
-  description?: string
+	title: string
+	description?: string
 }
 
 const today = new Date()
@@ -78,16 +78,27 @@ const { title, description } = Astro.props
             class={css({
               fontSize: '5xl',
               fontWeight: 700,
-              transform: 'skewY(-1deg)',
-            })}>Today I Learned</a
+            })}
           >
+            <span class={css({fontSize: '7xl'})}>Today</span> I Learned
+          </a>
         </div>
       </header>
       <main role="main">
         <slot />
       </main>
-      <footer role="contentinfo" class={css({ py: 6 })}>
-        <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
+      <footer
+        role="contentinfo"
+        class={css({ py: 6, borderTopWidth: '1px', borderColor: 'gray.300' })}
+      >
+        <div
+          class={css({
+            w: 'full',
+            maxW: '5xl',
+            mx: 'auto',
+            textAlign: 'center',
+          })}
+        >
           &copy; {today.getFullYear()}. Made with <span>❤</span>&nbsp;
           <a
             href="https://astro.build/"

@@ -1,5 +1,5 @@
 <script>
-  const title = "Svelte Component";
+const title = 'Svelte Component'
 </script>
 
 {title}
