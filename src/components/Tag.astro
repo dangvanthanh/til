@@ -1,0 +1,11 @@
+---
+import { postClass } from '@/styles/panda'
+
+const { post } = Astro.props
+---
+
+<div>
+  <a href={`/posts/${post.slug}`} class={postClass}>
+    {post.data.title}
+  </a>
+</div>

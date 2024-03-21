@@ -1,10 +1,10 @@
 ---
-import Layout from '@/layouts/layout.astro'
 import { getCollection } from 'astro:content'
-import { css } from '@/styled-system/css'
-import { flex, grid } from '@/styled-system/patterns'
 import MarqueePosts from '@/components/MarqueePosts.astro'
 import Post from '@/components/Post.astro'
+import Layout from '@/layouts/layout.astro'
+import { css } from '@/styled-system/css'
+import { flex, grid } from '@/styled-system/patterns'
 
 const title = 'Home'
 
@@ -21,7 +21,7 @@ const postsTwo = posts.slice(maxPosts)
     <MarqueePosts posts={postsOne} />
     <MarqueePosts posts={postsTwo} reversed={true} />
   </div>
-  <div class={css({ w: 'full', maxW: '5xl', mx: 'auto' })}>
+  <div class={css({ w: 'full', maxW: '5xl', mx: 'auto', px: 4 })}>
     <div class={grid({ columns: { base: 1, md: 2, lg: 3 }, gap: 6, my: 8 })}>
       {posts.map((post) => <Post post={post} />)}
     </div>

@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '@/layouts/layout.astro'
+import { css } from '@/styled-system/css'
+import { flex } from '@/styled-system/patterns'
+import { postClass } from '@/styles/panda'
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts')
+
+  const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))]
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags
+        .map((tag: string) => tag.toLowerCase())
+        .includes(tag.toLowerCase())
+    )
+
+    return {
+      params: { tag: tag.toLowerCase() },
+      props: { posts: filteredPosts },
+    }
+  })
+}
+
+const title = 'Tags'
+const { tag } = Astro.params
+const { posts } = Astro.props
+---
+
+<Layout title={title}>
+  <div class={css({ w: 'full', maxW: '5xl', mx: 'auto', px: 4 })}>
+    <h1
+      class={css({
+        fontSize: '3xl',
+        fontWeight: 700,
+        lineHeight: '1',
+      })}
+    >
+      Tagged "{tag}"
+    </h1>
+    <div class={flex({ gap: 3, wrap: 'wrap', my: 8, pb: 6 })}>
+      {
+        posts.map((post) => (
+          <div>
+            <a href={`/posts/${post.slug}`} class={postClass}>
+              {post.data.title}
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

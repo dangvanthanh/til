@@ -5,11 +5,11 @@ import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
 
 export async function getStaticPaths() {
-	const postEntries = await getCollection('posts')
-	return postEntries.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry },
-	}))
+  const postEntries = await getCollection('posts')
+  return postEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  })) 
 }
 
 const { entry } = Astro.props
@@ -17,7 +17,7 @@ const { Content } = await entry.render()
 ---
 
 <Layout title={entry.data.title}>
-  <div class={css({ w: 'full', maxW: '5xl', mx: 'auto', mb: 8 })}>
+  <div class={css({ w: 'full', maxW: '5xl', mx: 'auto', px: 4, mb: 8 })}>
     <div
       class={css({
         bg: 'white',
@@ -33,7 +33,7 @@ const { Content } = await entry.render()
         {
           entry.data.tags.map((tag: unknown) => (
             <a
-              href={`/tag/${tag}`}
+              href={`/tags/${tag}`}
               class={css({
                 rounded: 'full',
                 px: 3,
