@@ -5,11 +5,11 @@ import { css } from '@/styled-system/css'
 import { flex } from '@/styled-system/patterns'
 
 export async function getStaticPaths() {
-  const postEntries = await getCollection('posts')
-  return postEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  })) 
+	const postEntries = await getCollection('posts')
+	return postEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}))
 }
 
 const { entry } = Astro.props
