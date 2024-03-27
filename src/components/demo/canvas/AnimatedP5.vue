@@ -44,7 +44,7 @@ onMounted(() => {
 					let mod = Math.sin(t * Math.PI)
 
 					// we make it 'ease' a bit more dramatically with exponential
-					mod = Math.pow(mod, 3)
+					mod = mod ** 3
 
 					// now choose a length, thickness and initial rotation
 					const length = tileSize * 0.65

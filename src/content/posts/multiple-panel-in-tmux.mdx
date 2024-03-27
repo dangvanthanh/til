@@ -1,16 +1,32 @@
 ---
 title: Multiple Panel in Tmux
-tags: [tmux]
+tags: [tmux, vim]
 ---
 
-## Split Vertically
+In `tmux.conf` file, add the following lines
 
-<br/>
+```shell
+unbind C-b
+set -g prefix C-a
+bind-key C-a send-prefix
+bind | split-window -h
+bind - split-window -v
+```
 
-`CTRL+A` `|`
+## Split horizontally
 
-## Kill Current Pane
+```shell
+ctrl+a _
+````
 
-<br/>
+## Split vertically
 
-`CTRL+A` `X`
+```shell
+ctrl+a |
+````
+
+## Kill the current pane
+
+```shell
+ctrl+a X
+```

@@ -16,7 +16,7 @@
 		"@astrojs/alpinejs": "^0.4.0",
 		"@astrojs/check": "^0.5.10",
 		"@astrojs/lit": "^4.0.1",
-		"@astrojs/mdx": "^2.2.1",
+		"@astrojs/mdx": "^2.2.2",
 		"@astrojs/partytown": "^2.0.4",
 		"@astrojs/preact": "^3.1.1",
 		"@astrojs/react": "^3.1.0",
@@ -26,7 +26,7 @@
 		"@astrojs/vue": "^4.0.9",
 		"@webcomponents/template-shadowroot": "^0.2.1",
 		"alpinejs": "^3.13.7",
-		"astro": "^4.5.9",
+		"astro": "^4.5.10",
 		"canvas-sketch": "^0.7.7",
 		"canvas-sketch-util": "^1.10.0",
 		"lit": "^3.1.2",
@@ -41,16 +41,14 @@
 		"vue": "^3.4.21"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.6.2",
+		"@biomejs/biome": "1.6.3",
 		"@pandacss/dev": "^0.36.1",
 		"@pandacss/types": "^0.36.1",
 		"@types/alpinejs": "^3.13.10",
-		"@types/react": "^18.2.70",
+		"@types/react": "^18.2.72",
 		"@types/react-dom": "^18.2.22",
 		"husky": "^9.0.11",
-		"lint-staged": "^15.2.2",
-		"prettier": "^3.2.5",
-		"prettier-plugin-astro": "^0.13.0"
+		"lint-staged": "^15.2.2"
 	},
 	"lint-staged": {
 		"*.{js,ts,tsx,vue,astro}": ["pnpm run lint", "pnpm run format"]
