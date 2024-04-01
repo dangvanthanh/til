@@ -9,9 +9,9 @@ import { flex, grid } from '@/styled-system/patterns'
 const title = 'Home'
 
 const posts = await getCollection('posts')
-const maxPosts = 25
-const postsOne = posts.slice(0, maxPosts)
-const postsTwo = posts.slice(maxPosts)
+const maxPosts = posts.length / 2
+const postsOne = posts.slice(0, Math.floor(maxPosts))
+const postsTwo = posts.slice(Math.floor(maxPosts))
 ---
 
 <Layout title={title}>

@@ -3,8 +3,26 @@ title: Brand Renamed From Master
 tags: [git]
 ---
 
-Brand renamed from `master` to `default`
+Brand renamed from `master` to `main`
 
 ```shell
-git push -f origin default
+git branch -m master main
+``` 
+
+Let's quickly check if this has worked as expected:
+
+```shell
+git status
+```
+
+Make sure your current local HEAD branch is still "main" when executing the following command:
+
+```shell
+git push -u origin main
+```
+
+We now have a new branch on the remote named "main". Let's go on and remove the old "master" branch on the remote:
+
+```shell
+git push origin --delete master
 ```

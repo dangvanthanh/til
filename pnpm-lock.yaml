@@ -16,7 +16,7 @@ dependencies:
     version: 4.0.1(@webcomponents/template-shadowroot@0.2.1)(lit@3.1.2)
   '@astrojs/mdx':
     specifier: ^2.2.2
-    version: 2.2.2(astro@4.5.10)
+    version: 2.2.2(astro@4.5.12)
   '@astrojs/partytown':
     specifier: ^2.0.4
     version: 2.0.4
@@ -25,19 +25,19 @@ dependencies:
     version: 3.1.1(@babel/core@7.24.3)(preact@10.20.1)(vite@5.1.4)
   '@astrojs/react':
     specifier: ^3.1.0
-    version: 3.1.0(@types/react-dom@18.2.22)(@types/react@18.2.72)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.4)
+    version: 3.1.0(@types/react-dom@18.2.23)(@types/react@18.2.73)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.4)
   '@astrojs/solid-js':
     specifier: ^4.0.1
     version: 4.0.1(solid-js@1.8.16)(vite@5.1.4)
   '@astrojs/svelte':
     specifier: ^5.2.0
-    version: 5.2.0(astro@4.5.10)(svelte@4.2.12)(typescript@5.4.3)(vite@5.1.4)
+    version: 5.2.0(astro@4.5.12)(svelte@4.2.12)(typescript@5.4.3)(vite@5.1.4)
   '@astrojs/vercel':
-    specifier: ^7.4.0
-    version: 7.4.0(astro@4.5.10)(react@18.2.0)
+    specifier: ^7.5.0
+    version: 7.5.0(astro@4.5.12)(react@18.2.0)
   '@astrojs/vue':
     specifier: ^4.0.9
-    version: 4.0.9(@babel/core@7.24.3)(astro@4.5.10)(vite@5.1.4)(vue@3.4.21)
+    version: 4.0.9(@babel/core@7.24.3)(astro@4.5.12)(vite@5.1.4)(vue@3.4.21)
   '@webcomponents/template-shadowroot':
     specifier: ^0.2.1
     version: 0.2.1
@@ -45,8 +45,8 @@ dependencies:
     specifier: ^3.13.7
     version: 3.13.7
   astro:
-    specifier: ^4.5.10
-    version: 4.5.10(typescript@5.4.3)
+    specifier: ^4.5.12
+    version: 4.5.12(typescript@5.4.3)
   canvas-sketch:
     specifier: ^0.7.7
     version: 0.7.7
@@ -69,8 +69,8 @@ dependencies:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
   rehype-pretty-code:
-    specifier: ^0.13.0
-    version: 0.13.0(shiki@1.1.7)
+    specifier: ^0.13.1
+    version: 0.13.1(shiki@1.1.7)
   solid-js:
     specifier: ^1.8.16
     version: 1.8.16
@@ -98,11 +98,11 @@ devDependencies:
     specifier: ^3.13.10
     version: 3.13.10
   '@types/react':
-    specifier: ^18.2.72
-    version: 18.2.72
+    specifier: ^18.2.73
+    version: 18.2.73
   '@types/react-dom':
-    specifier: ^18.2.22
-    version: 18.2.22
+    specifier: ^18.2.23
+    version: 18.2.23
   husky:
     specifier: ^9.0.11
     version: 9.0.11
@@ -151,8 +151,8 @@ packages:
     resolution: {integrity: sha512-XpC8MAaWjD1ff6/IfkRq/5k1EFj6zhCNqXRd5J43SVJEBj/Bsmizkm8N0xOYscGcDFQkRgEw6/eKnI5x/1l6aA==}
     dev: false
 
-  /@astrojs/internal-helpers@0.3.0:
-    resolution: {integrity: sha512-tGmHvrhpzuz0JBHaJX8GywN9g4rldVNHtkoVDC3m/DdzBO70jGoVuc0uuNVglRYnsdwkbG0K02Iw3nOOR3/Y4g==}
+  /@astrojs/internal-helpers@0.4.0:
+    resolution: {integrity: sha512-6B13lz5n6BrbTqCTwhXjJXuR1sqiX/H6rTxzlXx+lN1NnV4jgnq/KJldCQaUWJzPL5SiWahQyinxAbxQtwgPHA==}
     dev: false
 
   /@astrojs/language-server@2.8.4(typescript@5.4.3):
@@ -226,7 +226,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/mdx@2.2.2(astro@4.5.10):
+  /@astrojs/mdx@2.2.2(astro@4.5.12):
     resolution: {integrity: sha512-5SIFtOctC813HFyqJwBf5TBvlT9sbiOOv+bdvzAoiBSab95dC7PZhss22EvUEx+897c81YoIZ4F9fg4ZkxBFIw==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -235,7 +235,7 @@ packages:
       '@astrojs/markdown-remark': 4.3.2
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.5.10(typescript@5.4.3)
+      astro: 4.5.12(typescript@5.4.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -286,7 +286,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/react@3.1.0(@types/react-dom@18.2.22)(@types/react@18.2.72)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.4):
+  /@astrojs/react@3.1.0(@types/react-dom@18.2.23)(@types/react@18.2.73)(react-dom@18.2.0)(react@18.2.0)(vite@5.1.4):
     resolution: {integrity: sha512-KZhZyV+sUDZEjlrmPWNiPGeYowG9uq6/aMbCgVaeKEBlWT4Kg32TNwBOhZk6AcE4LY1l3mIwt3orUGE2JV96/g==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -295,8 +295,8 @@ packages:
       react: ^17.0.2 || ^18.0.0
       react-dom: ^17.0.2 || ^18.0.0
     dependencies:
-      '@types/react': 18.2.72
-      '@types/react-dom': 18.2.22
+      '@types/react': 18.2.73
+      '@types/react-dom': 18.2.23
       '@vitejs/plugin-react': 4.2.1(vite@5.1.4)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -320,7 +320,7 @@ packages:
       - vite
     dev: false
 
-  /@astrojs/svelte@5.2.0(astro@4.5.10)(svelte@4.2.12)(typescript@5.4.3)(vite@5.1.4):
+  /@astrojs/svelte@5.2.0(astro@4.5.12)(svelte@4.2.12)(typescript@5.4.3)(vite@5.1.4):
     resolution: {integrity: sha512-GmwbXks2WMkmAfl0rlPM/2gA1RtmZzjGV2mOceV3g7QNyjIsSYBPKrlEnSFnuR+YMvlAtWdbMFBsb3gtGxnTTg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -329,7 +329,7 @@ packages:
       typescript: ^5.3.3
     dependencies:
       '@sveltejs/vite-plugin-svelte': 3.0.2(svelte@4.2.12)(vite@5.1.4)
-      astro: 4.5.10(typescript@5.4.3)
+      astro: 4.5.12(typescript@5.4.3)
       svelte: 4.2.12
       svelte2tsx: 0.6.27(svelte@4.2.12)(typescript@5.4.3)
       typescript: 5.4.3
@@ -353,16 +353,16 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vercel@7.4.0(astro@4.5.10)(react@18.2.0):
-    resolution: {integrity: sha512-KMCDCOV+UwsJnDX4Q/FE18S0+XwOlu3e6UA/Jr/v2vh0v24aDpkbA0L9DmV4c1ETHLY/vxfjey40gk30iSXNKw==}
+  /@astrojs/vercel@7.5.0(astro@4.5.12)(react@18.2.0):
+    resolution: {integrity: sha512-RYFZNHkfNgFNb41nblG26ubw5924hAjLYs+Bpp4kttcsYJAX/wavIfDbfZQ/XesDTKwIH+Gi/+3c5bldZePFDA==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
-      '@astrojs/internal-helpers': 0.3.0
+      '@astrojs/internal-helpers': 0.4.0
       '@vercel/analytics': 1.2.2(react@18.2.0)
       '@vercel/edge': 1.1.1
       '@vercel/nft': 0.26.4
-      astro: 4.5.10(typescript@5.4.3)
+      astro: 4.5.12(typescript@5.4.3)
       esbuild: 0.19.12
       fast-glob: 3.3.2
       set-cookie-parser: 2.6.0
@@ -374,7 +374,7 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/vue@4.0.9(@babel/core@7.24.3)(astro@4.5.10)(vite@5.1.4)(vue@3.4.21):
+  /@astrojs/vue@4.0.9(@babel/core@7.24.3)(astro@4.5.12)(vite@5.1.4)(vue@3.4.21):
     resolution: {integrity: sha512-go+dRsDQpZYbwvMTJygw9i9W7apsI36STm/Ic4NTcTnlMGjQZlFi3GyQiPB8rstX+FpuTaCDxFSzDhqfD89tig==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -385,7 +385,7 @@ packages:
       '@vitejs/plugin-vue-jsx': 3.1.0(vite@5.1.4)(vue@3.4.21)
       '@vue/babel-plugin-jsx': 1.2.1(@babel/core@7.24.3)
       '@vue/compiler-sfc': 3.4.21
-      astro: 4.5.10(typescript@5.4.3)
+      astro: 4.5.12(typescript@5.4.3)
       vue: 3.4.21(typescript@5.4.3)
     transitivePeerDependencies:
       - '@babel/core'
@@ -2048,13 +2048,13 @@ packages:
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
 
-  /@types/react-dom@18.2.22:
-    resolution: {integrity: sha512-fHkBXPeNtfvri6gdsMYyW+dW7RXFo6Ad09nLFK0VQWR7yGLai/Cyvyj696gbwYvBnhGtevUG9cET0pmUbMtoPQ==}
+  /@types/react-dom@18.2.23:
+    resolution: {integrity: sha512-ZQ71wgGOTmDYpnav2knkjr3qXdAFu0vsk8Ci5w3pGAIdj7/kKAyn+VsQDhXsmzzzepAiI9leWMmubXz690AI/A==}
     dependencies:
-      '@types/react': 18.2.72
+      '@types/react': 18.2.73
 
-  /@types/react@18.2.72:
-    resolution: {integrity: sha512-/e7GWxGzXQF7OJAua7UAYqYi/4VpXEfbGtmYQcAQwP3SjjjAXfybTf/JK5S+SaetB/ChXl8Y2g1hCsj7jDXxcg==}
+  /@types/react@18.2.73:
+    resolution: {integrity: sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==}
     dependencies:
       '@types/prop-types': 15.7.11
       csstype: 3.1.3
@@ -2603,13 +2603,13 @@ packages:
     hasBin: true
     dev: false
 
-  /astro@4.5.10(typescript@5.4.3):
-    resolution: {integrity: sha512-xW/ZTSqSHEQyzWzXHJa9gEQXC+MUD3mhzEBJyrMp/JWT+geLgUK2m0Rrc/AnBl8EfdS/6uFadiJV1fWao4lc7w==}
+  /astro@4.5.12(typescript@5.4.3):
+    resolution: {integrity: sha512-xIJcFI2hbyV8+h5pWjL7SKD1jIP0K01fYVAH+gdAt0mJaXy+u8Mj+goD0cPlK6sEaykR+7zxQLYGKJ44U4qarg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.7.0
-      '@astrojs/internal-helpers': 0.3.0
+      '@astrojs/internal-helpers': 0.4.0
       '@astrojs/markdown-remark': 4.3.2
       '@astrojs/telemetry': 3.0.4
       '@babel/core': 7.24.3
@@ -5966,8 +5966,8 @@ packages:
       unified: 11.0.4
     dev: false
 
-  /rehype-pretty-code@0.13.0(shiki@1.1.7):
-    resolution: {integrity: sha512-+22dz1StXlF7dlMyOySNaVxgcGhMI4BCxq0JxJJPWYGiKsI6cu5jyuIKGHXHvH18D8sv1rdKtvsY9UEfN3++SQ==}
+  /rehype-pretty-code@0.13.1(shiki@1.1.7):
+    resolution: {integrity: sha512-Lw3cZohiw5J2NMMD0M11W9HlIKrZ7JjxfJmY0nxVa/HG5oMT+kkhcrUEFB5ajaEk/E9uR8+n9AmQbGJci9/TqA==}
     engines: {node: '>=18'}
     peerDependencies:
       shiki: ^1.0.0
