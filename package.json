@@ -9,8 +9,8 @@
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"lint": "pnpm dlx @biomejs/biome check ./src --apply",
-		"format": "pnpm dlx @biomejs/biome format ./src --write"
+		"lint": "bunx @biomejs/biome check ./src --apply",
+		"format": "bunx @biomejs/biome format ./src --write"
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.4.0",
@@ -51,6 +51,6 @@
 		"lint-staged": "^15.2.2"
 	},
 	"lint-staged": {
-		"*.{js,ts,tsx,vue,astro}": ["pnpm run lint", "pnpm run format"]
+		"*.{js,ts,tsx,vue,astro}": ["bun run lint", "bun run format"]
 	}
 }
