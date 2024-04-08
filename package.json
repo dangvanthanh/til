@@ -42,8 +42,8 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.6.4",
-		"@pandacss/dev": "^0.37.1",
-		"@pandacss/types": "^0.37.1",
+		"@pandacss/dev": "^0.37.2",
+		"@pandacss/types": "^0.37.2",
 		"@types/alpinejs": "^3.13.10",
 		"@types/react": "^18.2.74",
 		"@types/react-dom": "^18.2.24",
