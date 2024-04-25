@@ -47,7 +47,6 @@ article pre {
   padding: 1rem;
   background: transparent;
   overflow-x: auto;
-  border-radius: 0 0.5rem 0.5rem 0.5rem;
 }
 
 article pre > code {
@@ -110,7 +109,7 @@ article [data-rehype-pretty-code-figure] {
 
 article [data-rehype-pretty-code-title] {
   max-width: max-content;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   background-color: #1e293b;
   color: #9abcf3ec;
   padding: 0.5rem 1rem;
