@@ -1,0 +1,16 @@
+---
+title: One Watcher in Vue
+tags: [typescript, vue]
+---
+
+Watcher's callback will execute whenever the watched source changes. If you want the callback to trigger only once when the source changes, use the `once: true` option.
+
+```vue
+<script setup lang="ts">
+const source = ref('')
+
+watch(source, (newValue, oldValue) => {
+  // when `source` changes, triggers only once
+}, { once: true})
+</script>
+```
