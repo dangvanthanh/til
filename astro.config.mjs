@@ -12,6 +12,7 @@ import keystatic from '@keystatic/astro'
 import { defineConfig } from 'astro/config'
 import rehypePrettyCode from 'rehype-pretty-code'
 import moonlightTheme from './public/theme/moonlight-ii.json'
+import vercel from '@astrojs/vercel/serverless'
 const options = {
 	// Specify the theme to use or a custom theme json, in our case
 	// it will be a moonlight-II theme from
@@ -62,4 +63,5 @@ export default defineConfig({
 		keystatic(),
 	],
 	output: 'hybrid',
+	adapter: vercel(),
 })
