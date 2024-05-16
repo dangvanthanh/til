@@ -1,0 +1,23 @@
+---
+title: Navtive Git Hooks
+tags: [git]
+---
+
+First, create the `.hooks` folder in your project. Add the `pre-commit` file and grant it executable permission with `chmod +x .hooks/pre-commit`
+
+```shell
+#!/bin/sh
+echo "pre-commit hook run"
+```
+
+Now, let's open the `package.json` file and add the following line to scripts.
+
+```json
+{
+  "scripts": {
+    "prepare": "git config core.hooksPath .hooks",
+  }
+}
+```
+
+Now you can run install for running prepare scripts.

@@ -3,27 +3,25 @@
 </template>
 
 <script>
-import { randHsl } from './Utils';
-
 export default {
   name: 'canvas-art-Spirograph',
   mounted() {
-    let canvas = this.$el;
-    let context = canvas.getContext('2d');
-    let size = window.innerWidth / 2;
+    const canvas = this.$el;
+    const context = canvas.getContext('2d');
+    const size = window.innerWidth / 2;
     canvas.width = size;
     canvas.height = size;
 
-    var circle1,
-      circle2,
-      circle3,
-      circle4,
-      circle5,
-      circle6,
-      circle7,
-      circle8,
-      circle9,
-      circle10;
+    let circle1;
+    let circle2;
+    let circle3;
+    let circle4;
+    let circle5;
+    let circle6;
+    let circle7;
+    let circle8;
+    let circle9;
+    let circle10;
 
     function draw() {
       circle2.rotate(0.0044, 0.025, 10, 'rgba(52, 50, 90, 0.2)');

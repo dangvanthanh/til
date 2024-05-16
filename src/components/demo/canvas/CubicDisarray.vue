@@ -3,17 +3,27 @@
 </template>
 
 <script>
-import { randHsl } from './Utils';
+function rand(min, max) {
+	return min + Math.random() * (max - min)
+}
+
+function randHsl() {
+	const h = rand(1, 360)
+	const s = rand(0, 100)
+	const l = rand(0, 100)
+
+	return `hsl(${h}, ${s}%, ${l}%)`
+}
 
 export default {
   name: 'canvas-art-CubicDisarray',
   mounted() {
-    let canvas = this.$el;
-    let context = canvas.getContext('2d');
-    let size = window.innerWidth / 2;
-    let squareSize = 40;
-    let randomDisplacement = 15;
-    let rotateMultiplier = 20;
+    const canvas = this.$el;
+    const context = canvas.getContext('2d');
+    const size = window.innerWidth / 2;
+    const squareSize = 40;
+    const randomDisplacement = 15;
+    const rotateMultiplier = 20;
 
     context.lineWidth = 2;
 
@@ -31,14 +41,14 @@ export default {
     for (let i = 0; i <= size - squareSize; i += squareSize) {
       for (let j = 0; j <= size - squareSize; j += squareSize) {
         let plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-        let rotateAmt =
+        const rotateAmt =
           (((j / size) * Math.PI) / 180) *
           plusOrMinus *
           Math.random() *
           rotateMultiplier;
 
         plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-        let translateAmt =
+        const translateAmt =
           (j / size) * plusOrMinus * Math.random() * randomDisplacement;
 
         context.save();

@@ -6,10 +6,10 @@
 export default {
   name: 'canvas-art-UnDeuxTrois',
   mounted() {
-    let canvas = this.$el;
-    let context = canvas.getContext('2d');
+    const canvas = this.$el;
+    const context = canvas.getContext('2d');
 
-    let size = window.innerWidth / 2;
+    const size = window.innerWidth / 2;
 
     canvas.width = size;
     canvas.height = size;
@@ -17,8 +17,8 @@ export default {
     context.lineWidth = 4;
     context.lineCap = 'round';
 
-    let step = 20;
-    let thirdOfHeight = size / 3;
+    const step = 20;
+    const thirdOfHeight = size / 3;
 
     for (let y = step; y < size - step; y += step) {
       for (let x = step; x < size - step; x += step) {

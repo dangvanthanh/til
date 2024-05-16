@@ -1,7 +1,7 @@
 <script setup>
 import canvasSketch from 'canvas-sketch'
 import { lerp } from 'canvas-sketch-util/math'
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
 
 const settings = {
 	duration: 3,
@@ -12,7 +12,6 @@ const settings = {
 	fps: 24,
 }
 
-const canvas = ref(null)
 
 onMounted(() => {
 	canvasSketch(() => {
@@ -78,5 +77,5 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="canvas"></div>
+  <div ref="canvasRef"></div>
 </template>
