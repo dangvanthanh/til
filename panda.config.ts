@@ -4,8 +4,10 @@ export default defineConfig({
 	lightningcss: true,
 	preflight: true,
 	include: [
-		'./src/**/*.{js,jsx,ts,tsx,astro}',
-		'./pages/**/*.{js,jsx,ts,tsx,astro}',
+		'./src/**/*.{js,jsx,ts,tsx,vue,astro}',
+		'./pages/**/*.{js,jsx,ts,tsx,vue,astro}',
+    './components/**/*.{js,jsx,ts,tsx,vue,astro}',
+    './layouts/**/*.{js,jsx,ts,tsx,vue,astro}',
 	],
 	exclude: [],
 	theme: {

@@ -12,7 +12,6 @@ const settings = {
 	fps: 24,
 }
 
-
 onMounted(() => {
 	canvasSketch(() => {
 		return ({ context, width, height, playhead }) => {

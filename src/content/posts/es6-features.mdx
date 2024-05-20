@@ -188,18 +188,76 @@ console.log(rest); // [3, 4, 5]
 
 `Set`, `Map`, `WeakSet`, `WeakMap`
 
+```js
+// Sets
+var s = new Set();
+s.add("hello").add("goodbye").add("hello");
+s.size === 2;
+s.has("hello") === true;
+
+// Maps
+var m = new Map();
+m.set("hello", 42);
+m.set(s, 34);
+m.get(s) == 34;
+
+// Weak Maps
+var wm = new WeakMap();
+wm.set(s, { extra: 42 });
+wm.size === undefined
+
+// Weak Sets
+var ws = new WeakSet();
+ws.add({ data: 42 });
+```
+
 ### Object Proxies
 
-### Reflection
+```js
+// Proxying a normal object
+var target = {};
+var handler = {
+  get: function (receiver, name) {
+    return `Hello, ${name}!`;
+  }
+};
+
+var p = new Proxy(target, handler);
+p.world === 'Hello, world!';
+
+// Proxying a function object
+var target = function () { return 'I am the target'; };
+var handler = {
+  apply: function (receiver, ...args) {
+    return 'I am the proxy';
+  }
+};
+
+var p = new Proxy(target, handler);
+p() === 'I am the proxy';
+```
 
 ### Symbols
 
-### Typed Arrays
+```js
+var MyClass = (function() {
 
-### Minor Features
+  // module scoped symbol
+  var key = Symbol("key");
 
-### Async/Await
+  function MyClass(privateData) {
+    this[key] = privateData;
+  }
 
-### Single Intrution Multiple Data (SIMD)
+  MyClass.prototype = {
+    doStuff: function() {
+      ... this[key] ...
+    }
+  };
 
-### Asynchronous Iteration
+  return MyClass;
+})();
+
+var c = new MyClass("hello")
+c["key"] === undefined
+```
