@@ -12,27 +12,27 @@ type HitProps = {
 }
 
 const searchBoxStyles = css({
-  w: 'full',
-  borderBottomWidth: 1,
-  borderBottomColor: 'stone.300',
-  '& form': {
-    display: 'flex',
-    alignItems: 'center',
-    '& input': {
-      w: 'full',
-      px: 3, 
-      py: 1.5
-    },
-    '& button[type="submit"]': {
-      px: 2
-    },
-    '& button[type="reset"]': {
-      px: 2
-    },
-    '& span': {
-      px: 2
-    }
-  }
+	w: 'full',
+	borderBottomWidth: 1,
+	borderBottomColor: 'stone.300',
+	'& form': {
+		display: 'flex',
+		alignItems: 'center',
+		'& input': {
+			w: 'full',
+			px: 3,
+			py: 1.5,
+		},
+		'& button[type="submit"]': {
+			px: 2,
+		},
+		'& button[type="reset"]': {
+			px: 2,
+		},
+		'& span': {
+			px: 2,
+		},
+	},
 })
 
 function Hit({ hit }: HitProps) {
