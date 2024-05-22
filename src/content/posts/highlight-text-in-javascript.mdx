@@ -1,0 +1,25 @@
+---
+title: Highlight Text in JavaScript
+tags: [javascript]
+---
+
+Here is the code snippet to highlight matching text in JavaScript:
+
+```javascript
+const $ = (el) => document.getElementById(el)
+
+const box = $('box')
+const search = $('search')
+
+search.addEventListener('input', (event) => {
+  const searchText = event.target.value
+  const regex = new RegExp(searchText, 'gi')
+
+  let text = box.innerHTML
+  text = text.replace(/(<mark class="highlight">|<\/mark>)/gim, '')
+
+  const newText = text.replace(regex, '<mark class="highlight">$&</mark>')
+  box.innerHTML = newText
+})
+```
+
