@@ -14,12 +14,12 @@
 	},
 	"dependencies": {
 		"@astrojs/alpinejs": "^0.4.0",
-		"@astrojs/check": "^0.8.1",
+		"@astrojs/check": "^0.8.2",
 		"@astrojs/lit": "^4.3.0",
-		"@astrojs/markdoc": "^0.11.1",
+		"@astrojs/markdoc": "^0.11.2",
 		"@astrojs/mdx": "^3.1.2",
 		"@astrojs/partytown": "^2.1.1",
-		"@astrojs/preact": "^3.5.0",
+		"@astrojs/preact": "^3.5.1",
 		"@astrojs/react": "^3.6.0",
 		"@astrojs/solid-js": "^4.4.0",
 		"@astrojs/svelte": "^5.6.0",
@@ -27,11 +27,11 @@
 		"@astrojs/vue": "^4.5.0",
 		"@keystatic/astro": "^5.0.0",
 		"@keystatic/core": "^0.5.27",
-		"@tanstack/react-query": "^5.51.1",
+		"@tanstack/react-query": "^5.51.9",
 		"@webcomponents/template-shadowroot": "^0.2.1",
 		"algoliasearch": "^4.24.0",
 		"alpinejs": "^3.14.1",
-		"astro": "^4.11.5",
+		"astro": "^4.11.6",
 		"canvas-sketch": "^0.7.7",
 		"canvas-sketch-util": "^1.10.0",
 		"dotenv": "^16.4.5",
@@ -45,7 +45,7 @@
 		"solid-js": "^1.8.18",
 		"svelte": "^4.2.18",
 		"typescript": "^5.5.3",
-		"vue": "^3.4.31"
+		"vue": "^3.4.32"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
